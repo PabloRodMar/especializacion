@@ -1,0 +1,1 @@
+El laboratorio funciona sin dependencias. Para la extensión Parquet, instala pyarrow y vuelve a ejecutar generar_datos.py.

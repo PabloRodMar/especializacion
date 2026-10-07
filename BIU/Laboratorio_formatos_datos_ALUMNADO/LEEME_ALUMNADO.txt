@@ -1,0 +1,53 @@
+LABORATORIO OFFLINE: FORMATOS Y ARQUITECTURA DE DATOS
+
+MATERIAL DEL ALUMNADO
+
+1. Copia esta carpeta al ordenador. No trabajes directamente desde el pendrive.
+2. Renombra Cuaderno_de_laboratorio.xlsx con el nombre de tu equipo.
+3. Abre el cuaderno con Excel, LibreOffice Calc o Numbers.
+4. Abre una terminal dentro de esta carpeta.
+5. Comprueba que Python 3 está disponible:
+
+   macOS o Linux:  python3 --version
+   Windows:        py --version
+
+6. Espera las indicaciones de la docente antes de ejecutar cada experimento.
+
+COMANDOS
+
+macOS o Linux:
+
+  python3 laboratorio.py tamanos
+  python3 laboratorio.py proyeccion
+  python3 laboratorio.py particiones
+  python3 laboratorio.py esquema
+  python3 laboratorio.py csv_roto
+
+Windows:
+
+  py laboratorio.py tamanos
+  py laboratorio.py proyeccion
+  py laboratorio.py particiones
+  py laboratorio.py esquema
+  py laboratorio.py csv_roto
+
+No ejecutes todos los experimentos al principio. La docente indicará cuándo ejecutar
+cada uno.
+
+TRABAJO DEL EQUIPO
+
+- Operador/a: ejecuta los comandos y conserva las salidas.
+- Analista: registra las medidas en el cuaderno.
+- Revisor/a: comprueba que las conclusiones estén justificadas.
+
+Después de cada experimento:
+
+1. Registra las medidas observadas.
+2. Explica qué demuestra el resultado.
+3. Indica qué no puede demostrarse únicamente con esa medición.
+4. Relaciona la evidencia con una decisión técnica.
+5. Guarda el cuaderno.
+
+ENTREGA
+
+Entrega únicamente el archivo Cuaderno_de_laboratorio renombrado y completado.
