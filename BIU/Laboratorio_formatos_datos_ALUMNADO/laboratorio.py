@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""Experimentos reproducibles del laboratorio de formatos de datos.
+"""
+Experimentos reproducibles del laboratorio de formatos de datos.
 
 Uso:
     python3 laboratorio.py todo
