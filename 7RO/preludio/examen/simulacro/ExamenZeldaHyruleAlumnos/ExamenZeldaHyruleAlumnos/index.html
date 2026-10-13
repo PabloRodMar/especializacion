@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Alumnos] Examen Python POO: La Alforja y el Desafío de Hyrule | Tableta Sheikah OS</title>
+    <meta name="description"
+        content="Examen práctico de 2-3 horas para el Curso de Especialización en Inteligencia Artificial y Big Data (Módulo 7RO): construye un simulador de supervivencia, alforja y combate en Hyrule usando POO, dataclasses, colecciones y manejo de excepciones.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Rajdhani:wght@500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="scroll-progress" id="scrollBar"></div>
+    <canvas id="fireflies" aria-hidden="true"></canvas>
+    <div class="container">
+        <!-- MARCO EXTERIOR SHEIKAH SLATE -->
+        <div class="sheikah-frame">
+
+            <!-- BARRA SUPERIOR DE LA TABLETA -->
+            <div class="sheikah-top-bar">
+                <div class="sheikah-indicator">
+                    <div class="sheikah-lens-mini"></div>
+                    <span>SHEIKAH SLATE OS v4.8 · SISTEMA DE EVALUACIÓN</span>
+                </div>
+                <div style="font-family: 'Press Start 2P', monospace; font-size: 0.65rem; color: var(--sheikah-gold);">
+                    <svg class="triforce-mini" viewBox="0 0 100 90" aria-hidden="true"><polygon points="50,2 74,44 26,44" fill="#ffc400"/><polygon points="26,46 50,88 2,88" fill="#ffc400"/><polygon points="74,46 98,88 50,88" fill="#ffc400"/></svg> ESPECIALIZACIÓN IA & BIG DATA · MÓDULO 7RO
+                </div>
+            </div>
+
+            <!-- ====================== CABECERA PRINCIPAL ====================== -->
+            <header class="exam-header" id="top">
+                <div>
+                    <h1>EXAMEN POO: LA ALFORJA Y EL DESAFÍO DE HYRULE</h1>
+                    <div class="subtitle">Curso de Especialización en IA y Big Data · Módulo 7RO · POO en Python</div>
+                    <div class="intro">
+                        ¡El Héroe despierta en la Cámara del Renacimiento! Para superar las pruebas de los Santuarios
+                        Ancestrales deberás programar en Python el <strong>sistema de alforja de armas</strong>, el
+                        cálculo de <strong>daño con ventajas elementales</strong> y el <strong>motor de combate por
+                        turnos</strong> frente a criaturas hostiles de Hyrule. Demuestra tu dominio de la
+                        <strong>Programación Orientada a Objetos</strong> sin fisuras.
+                    </div>
+                    <div class="meta-chips">
+                        <span class="chip">⏱️ 2 a 3 horas</span>
+                        <span class="chip">🐍 Python 3.10+</span>
+                        <span class="chip">📄 Entrega: <code>desafio_hyrule.py</code></span>
+                        <span class="chip chip-gold">🏅 10 Puntos + 1 Extra</span>
+                        <span class="chip chip-gold">🛡️ POO · Dataclasses · Excepciones</span>
+                    </div>
+                </div>
+
+                <!-- ESCENA ANIMADA DE HYRULE -->
+                <div class="hyrule-scene" aria-label="Simulador visual de combate en Hyrule">
+                    <canvas id="runesCanvas"></canvas>
+                    <div class="scene-top">
+                        <div class="heart-display">
+                            <span class="heart-icon">❤️</span>
+                            <span class="heart-icon">❤️</span>
+                            <span class="heart-icon">❤️</span>
+                            <span class="heart-icon">❤️</span>
+                            <span style="font-weight: 700; margin-left: 5px; color: #ff80ab;">16/16 PS</span>
+                        </div>
+                        <div class="stamina-wheel-wrap">
+                            <div class="stamina-circle"></div>
+                            <span style="font-weight: 700; font-size: 0.88rem; color: #a7ffeb;">STAMINA</span>
+                        </div>
+                    </div>
+
+                    <div class="scene-combatants">
+                        <!-- LINK -->
+                        <div class="combatant">
+                            <svg class="combatant-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="50" cy="50" r="45" fill="rgba(0, 229, 255, 0.15)" stroke="#00e5ff" stroke-width="2"/>
+                                <!-- Gorro y Cabello -->
+                                <path d="M30 45 C30 25, 70 25, 70 45 Z" fill="#4caf50"/>
+                                <path d="M68 32 L85 48 L70 48 Z" fill="#388e3c"/>
+                                <!-- Cara -->
+                                <circle cx="50" cy="52" r="18" fill="#ffe0b2"/>
+                                <circle cx="44" cy="50" r="3" fill="#0288d1"/>
+                                <circle cx="56" cy="50" r="3" fill="#0288d1"/>
+                                <!-- Túnica del Elegido (Azul Sheikah) -->
+                                <path d="M34 68 L66 68 L72 92 L28 92 Z" fill="#00b0ff"/>
+                                <path d="M48 68 L52 68 L52 92 L48 92 Z" fill="#ffffff"/>
+                                <!-- Espada Maestra -->
+                                <rect x="76" y="25" width="4" height="45" fill="#cfd8dc" rx="1"/>
+                                <rect x="71" y="65" width="14" height="4" fill="#3949ab" rx="2"/>
+                                <polygon points="78,20 75,25 81,25" fill="#b0bec5"/>
+                            </svg>
+                            <span class="combatant-name" style="color: var(--sheikah-cyan);">LINK</span>
+                        </div>
+
+                        <div class="vs-badge">VS</div>
+
+                        <!-- CENTALEÓN / LIZALFOS -->
+                        <div class="combatant combatant-monster">
+                            <svg class="combatant-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="50" cy="50" r="45" fill="rgba(255, 119, 0, 0.15)" stroke="#ff7700" stroke-width="2"/>
+                                <!-- Máscara y Cuernos de Centaleón -->
+                                <path d="M25 35 Q15 20 20 12 Q32 18 36 30 Z" fill="#d32f2f"/>
+                                <path d="M75 35 Q85 20 80 12 Q68 18 64 30 Z" fill="#d32f2f"/>
+                                <!-- Cabeza y Melena -->
+                                <circle cx="50" cy="50" r="22" fill="#37474f"/>
+                                <path d="M30 42 C30 28, 70 28, 70 42 C70 58, 30 58, 30 42 Z" fill="#212121"/>
+                                <!-- Ojos Brillantes -->
+                                <polygon points="40,48 46,45 44,52" fill="#ffeb3b"/>
+                                <polygon points="60,48 54,45 56,52" fill="#ffeb3b"/>
+                                <!-- Mandíbula feroz -->
+                                <path d="M42 62 L50 68 L58 62" stroke="#ff5252" stroke-width="3" stroke-linecap="round"/>
+                                <!-- Hacha de Centaleón -->
+                                <rect x="18" y="25" width="5" height="55" fill="#78909c"/>
+                                <path d="M10 32 C10 18, 30 22, 23 45 Z" fill="#ff3d00"/>
+                            </svg>
+                            <span class="combatant-name" style="color: var(--sheikah-orange);">CENTALEÓN</span>
+                        </div>
+                    </div>
+
+                    <div class="scene-dialog" id="sceneDialog">
+                        &gt; Tableta Sheikah: Módulo de combate listo. Analizando enemigo...
+                    </div>
+                </div>
+            </header>
+
+            <!-- ====================== HUD DE CONTROL ====================== -->
+            <div class="hud">
+                <div class="timer-wrap">
+                    <span class="timer-display" id="timerDisplay">02:30:00</span>
+                    <button class="hud-btn" id="timerToggleBtn" type="button">▶ Iniciar Desafío</button>
+                    <button class="hud-btn" id="timerResetBtn" type="button" title="Reiniciar cronómetro">↺</button>
+                </div>
+
+                <div class="spirit-orbs" title="Orbes de Santuario conseguidos">
+                    <span style="font-weight: 700; font-size: 0.9rem; margin-right: 4px; color: var(--sheikah-cyan);">ORBES:</span>
+                    <div class="orb-icon" data-step="1">1</div>
+                    <div class="orb-icon" data-step="2">2</div>
+                    <div class="orb-icon" data-step="3">3</div>
+                    <div class="orb-icon" data-step="4">4</div>
+                    <div class="orb-icon" data-step="5">5</div>
+                    <div class="orb-icon" data-step="6">6</div>
+                    <div class="orb-icon" data-step="7">7</div>
+                    <div class="orb-icon" data-step="8" style="border-color: var(--sheikah-gold);">★</div>
+                </div>
+
+                <div class="score-counter">
+                    PUNTOS: <span id="currentScore" style="color: var(--sheikah-gold);">0.0</span> / 10.0
+                </div>
+            </div>
+
+            <!-- NAVEGACIÓN RÁPIDA -->
+            <nav class="quick-nav">
+                <a href="#normas">📜 Normas</a>
+                <a href="#lore">📘 Guía de Hyrule</a>
+                <a href="#compendio">🐉 Compendio</a>
+                <a href="#datos">💾 Datos de Partida</a>
+                <a href="#pasos">⚔️ Pasos 1–7</a>
+                <a href="#bonus">⭐ Bonus Cocina</a>
+                <a href="#rubrica">🧮 Rúbrica</a>
+                <a href="#triggerZone">🔍 Santuario Secreto</a>
+            </nav>
+
+            <!-- ====================== SECCIÓN NORMAS ====================== -->
+            <section class="card" id="normas">
+                <div class="card-header">
+                    <h2>📜 NORMAS DE LA PRUEBA ANCESTRAL</h2>
+                    <div>
+                        <span class="tag-badge">POO & Tipado</span>
+                        <span class="tag-badge tag-gold">Lógica & Algoritmos</span>
+                        <span class="tag-badge tag-orange">Manejo de Errores</span>
+                    </div>
+                </div>
+                <div class="rules-grid">
+                    <div class="rule-item">
+                        <span class="rule-icon">📄</span>
+                        <div>
+                            <strong>Un único archivo ejecutable</strong>
+                            Todo tu desarrollo debe residir en <code>desafio_hyrule.py</code>. Debe ejecutarse limpiamente con <code>python desafio_hyrule.py</code>.
+                        </div>
+                    </div>
+                    <div class="rule-item">
+                        <span class="rule-icon">🧱</span>
+                        <div>
+                            <strong>POO y Tipado Estricto</strong>
+                            Respeta con exactitud los nombres de clases, atributos, métodos y firmas solicitadas. Usa type hints (<code>str</code>, <code>int</code>, <code>bool</code>...).
+                        </div>
+                    </div>
+                    <div class="rule-item">
+                        <span class="rule-icon">📦</span>
+                        <div>
+                            <strong>Solo Librería Estándar</strong>
+                            Permitido únicamente importar <code>random</code> y <code>dataclasses</code>. Prohibido instalar paquetes externos (<code>pip</code>).
+                        </div>
+                    </div>
+                    <div class="rule-item">
+                        <span class="rule-icon">🪜</span>
+                        <div>
+                            <strong>Construcción Incremental</strong>
+                            Cada paso se apoya en el anterior. Comprueba cada clase y función con la batería de pruebas antes de saltar a la siguiente.
+                        </div>
+                    </div>
+                    <div class="rule-item">
+                        <span class="rule-icon">🛡️</span>
+                        <div>
+                            <strong>Control de Errores Robusto</strong>
+                            Captura excepciones en las entradas de usuario con bloques <code>try / except</code> para que tu programa nunca sufra caídas inesperadas (crashes).
+                        </div>
+                    </div>
+                    <div class="rule-item">
+                        <span class="rule-icon">⚔️</span>
+                        <div>
+                            <strong>Narración Clara de Consola</strong>
+                            Las acciones de combate deben mostrarse con textos comprensibles e informativos (daño, armas desgastadas, curaciones, victoria/derrota).
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ====================== SECCIÓN LORE & CONCEPTOS ====================== -->
+            <section class="card" id="lore">
+                <div class="card-header">
+                    <h2>📘 GUÍA DEL HÉROE: MECÁNICAS DE HYRULE</h2>
+                    <span class="tag-badge">Fundamentos del Dominio</span>
+                </div>
+                <div class="card-banner" style="background-image: url('img/sheikah_bestiary_bg.png');">
+                    <span class="card-banner-caption">BESTIARIO DE HYRULE & INVESTIGACIÓN ANCESTRAL</span>
+                </div>
+                <p>
+                    En el vasto reino de Hyrule, la supervivencia depende del manejo inteligente del equipamiento.
+                    Las armas tienen <strong>durabilidad limitada</strong>: cada impacto las desgasta hasta que se rompen
+                    en pedazos irremediablemente. Además, dominar las <strong>ventajas elementales</strong> duplica el
+                    impacto de tus ataques sobre las vulnerabilidades de los enemigos.
+                </p>
+
+                <div class="lore-concept-grid">
+                    <div class="lore-box">
+                        <h4>❤️ Corazones y Daño</h4>
+                        <p style="margin-bottom: 8px;">
+                            La vitalidad de Link y los monstruos se mide en puntos de salud (PS). La defensa base amortigua parte del golpe:
+                        </p>
+                        <div style="background: rgba(0,0,0,0.5); padding: 8px 12px; border-radius: 6px; font-family: 'JetBrains Mono', monospace; font-size: 0.88rem; color: #a5d6a7;">
+                            daño_real = max(1, daño_recibido - (defensa // 3))
+                        </div>
+                        <p style="margin-top: 8px; font-size: 0.95rem; color: var(--text-muted);">
+                            La división entera <code>//</code> garantiza que el amortiguamiento sea un número entero.
+                        </p>
+                    </div>
+
+                    <div class="lore-box">
+                        <h4>⚡ Tabla de Reacciones Elementales</h4>
+                        <table class="element-table">
+                            <thead>
+                                <tr>
+                                    <th>Elemento Atacante</th>
+                                    <th>Elemento Objetivo</th>
+                                    <th>Multiplicador</th>
+                                    <th>Efecto Especial</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>🔥 Fuego</td>
+                                    <td>❄️ Hielo</td>
+                                    <td class="mult-20">×2.0</td>
+                                    <td>Derretimiento crítico</td>
+                                </tr>
+                                <tr>
+                                    <td>❄️ Hielo</td>
+                                    <td>🔥 Fuego</td>
+                                    <td class="mult-20">×2.0</td>
+                                    <td>Enfriamiento súbito</td>
+                                </tr>
+                                <tr>
+                                    <td>⚡ Eléctrico</td>
+                                    <td>⚔️ Físico</td>
+                                    <td class="mult-15">×1.5</td>
+                                    <td>Conducción por metal</td>
+                                </tr>
+                                <tr>
+                                    <td>✨ Sagrado</td>
+                                    <td>🌑 Abismo</td>
+                                    <td class="mult-20">×2.5</td>
+                                    <td>Purificación divina</td>
+                                </tr>
+                                <tr>
+                                    <td>Mismo elemento</td>
+                                    <td>Mismo elemento</td>
+                                    <td class="mult-05">×0.5</td>
+                                    <td>Resistencia elemental</td>
+                                </tr>
+                                <tr>
+                                    <td>Otros cruces</td>
+                                    <td>Cualquiera</td>
+                                    <td class="mult-10">×1.0</td>
+                                    <td>Daño neutral</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ====================== COMPENDIO DE HYRULE (API) ====================== -->
+            <section class="card" id="compendio">
+                <div class="card-header">
+                    <h2>🐉 COMPENDIO SHEIKAH DE HYRULE</h2>
+                    <span class="tag-badge">Datos en vivo · Hyrule Compendium API</span>
+                </div>
+                <div class="card-banner" style="background-image: url('img/sheikah_bestiary_bg.png');">
+                    <span class="card-banner-caption">REGISTRO DE CRIATURAS Y EQUIPAMIENTO · CLIC PARA ESCANEAR</span>
+                </div>
+                <p>
+                    La Tableta Sheikah consulta el compendio oficial de Hyrule para mostrarte los enemigos y armas con los
+                    que trabajarás en el examen. Pulsa una ficha para escanearla.
+                </p>
+                <div class="compendio-filters" id="compFilters">
+                    <button type="button" class="hud-btn active" data-filter="all">Todo</button>
+                    <button type="button" class="hud-btn" data-filter="monsters">👹 Monstruos</button>
+                    <button type="button" class="hud-btn" data-filter="equipment">⚔️ Equipo</button>
+                </div>
+                <div class="compendio-grid" id="compGrid"></div>
+            </section>
+
+            <!-- ====================== DATOS DE PARTIDA ====================== -->
+            <section class="card" id="datos">
+                <div class="card-header">
+                    <h2>💾 DATOS DE PARTIDA (COPIAR AL INICIO DE TU ARCHIVO)</h2>
+                    <span class="tag-badge tag-gold">Módulo de Constantes</span>
+                </div>
+                <div class="card-banner" style="background-image: url('img/terry_shop_bg.png');">
+                    <span class="card-banner-caption">TIENDA Y ARCHIVO DE RECURSOS DE HATELIA</span>
+                </div>
+                <p>
+                    Puri, la investigadora del laboratorio de Hatelia, te proporciona este catálogo con las armas forjadas,
+                    las criaturas avistadas en el bestiario y la matriz de reacciones. <strong>Copia este bloque íntegro
+                    al principio de tu fichero <code>desafio_hyrule.py</code> sin alterarlo</strong>:
+                </p>
+
+                <div class="code-wrap">
+                    <div class="code-top">
+                        <span>datos_iniciales_hyrule.py</span>
+                        <button class="copy-code-btn" type="button" data-target="codigoPartida">📋 Copiar Datos</button>
+                    </div>
+                    <pre class="py-code" id="codigoPartida">CATALOGO_ARMAS = {
+    101: {"nombre": "Espada de Viajero", "elemento": "fisico", "ataque": 16, "durabilidad": 20},
+    102: {"nombre": "Mandoble Real", "elemento": "fisico", "ataque": 38, "durabilidad": 36},
+    103: {"nombre": "Espada de Fuego", "elemento": "fuego", "ataque": 24, "durabilidad": 28},
+    104: {"nombre": "Lanza de Hielo", "elemento": "hielo", "ataque": 20, "durabilidad": 32},
+    105: {"nombre": "Cimitarra de Rayo", "elemento": "electrico", "ataque": 26, "durabilidad": 25},
+    106: {"nombre": "Espada Maestra Ancestral", "elemento": "sagrado", "ataque": 60, "durabilidad": 50},
+}
+
+TABLA_ELEMENTAL = {
+    ("fuego", "hielo"): 2.0,
+    ("hielo", "fuego"): 2.0,
+    ("electrico", "fisico"): 1.5,
+    ("sagrado", "abismo"): 2.5,
+    ("fuego", "fuego"): 0.5,
+    ("hielo", "hielo"): 0.5,
+    ("electrico", "electrico"): 0.5,
+}
+
+BESTIARIO_HYRULE = {
+    "Bokoblin Carmesí": {"vida": 72, "ataque": 12, "defensa": 5, "elemento": "fisico"},
+    "Lizalfos Ígneo": {"vida": 120, "ataque": 22, "defensa": 8, "elemento": "fuego"},
+    "Lizalfos Gélido": {"vida": 120, "ataque": 22, "defensa": 8, "elemento": "hielo"},
+    "Centaleón Plateado": {"vida": 240, "ataque": 45, "defensa": 18, "elemento": "abismo"},
+}</pre>
+                </div>
+            </section>
+
+            <!-- ====================== PASOS DEL EXAMEN ====================== -->
+            <section class="card" id="pasos">
+                <div class="card-header">
+                    <h2>⚔️ EL CAMINO DEL HÉROE: 7 PASOS SECUENCIALES</h2>
+                    <span class="tag-badge tag-orange">10 Puntos Totales</span>
+                </div>
+                <p>
+                    Sigue cada paso metódicamente. Desarrolla la clase o función solicitada, comprueba su comportamiento
+                    en consola con la prueba guiada y pulsa el botón del orbe para registrar tu avance.
+                </p>
+
+                <!-- PASO 1 -->
+                <article class="step-card" id="paso1" data-step="1" data-pts="1.5">
+                    <div class="step-top">
+                        <div class="step-title-group">
+                            <h3>PASO 1 · SANTUARIO DE MAUNO</h3>
+                            <div class="step-subtitle">La Dataclass <code>Arma</code></div>
+                        </div>
+                        <div class="step-badges">
+                            <span class="tag-badge tag-gold">1.5 Puntos</span>
+                            <span class="tag-badge">⏱️ ~20 min</span>
+                            <span class="tag-badge tag-orange">Dataclass</span>
+                        </div>
+                    </div>
+
+                    <div class="box-info">
+                        <span class="box-title">📘 Lo que debes saber de Hyrule</span>
+                        <ul>
+                            <li>Cada arma posee un <strong>elemento</strong> (<code>"fisico"</code>, <code>"fuego"</code>, <code>"hielo"</code>, <code>"electrico"</code>, <code>"sagrado"</code>).</li>
+                            <li>Tienen una <strong>durabilidad máxima</strong> y una <strong>durabilidad actual</strong>. Cada ataque consume durabilidad.</li>
+                            <li>Cuando la durabilidad llega a <strong>0</strong>, el arma está rota y queda inservible.</li>
+                        </ul>
+                    </div>
+
+                    <div class="box-task">
+                        <span class="box-title">🧩 Lo que debes programar</span>
+                        <ul>
+                            <li>Una <code>@dataclass</code> llamada <code>Arma</code> con los campos tipados:
+                                <code>id_arma: int</code>, <code>nombre: str</code>, <code>elemento: str</code>,
+                                <code>ataque_base: int</code>, <code>durabilidad_max: int</code> y <code>durabilidad_actual: int</code>.
+                            </li>
+                            <li>Método <code>esta_rota(self) -&gt; bool</code>: devuelve <code>True</code> si <code>durabilidad_actual &lt;= 0</code>.</li>
+                            <li>Método <code>desgastar(self, puntos: int = 1) -&gt; bool</code>: reduce la durabilidad sin bajar de 0.
+                                <strong>Debe retornar <code>True</code> si el arma se ha roto exactamente en este golpe</strong> (es decir, antes tenía &gt; 0 y ahora tiene 0). Si ya estaba rota, devuelve <code>False</code>.
+                            </li>
+                            <li>Método <code>__str__(self) -&gt; str</code>: devuelve una representación legible con barra visual de desgaste usando caracteres <code>█</code> para la durabilidad restante y <code>░</code> para la gastada.</li>
+                        </ul>
+                    </div>
+
+                    <div style="font-family: 'Press Start 2P', monospace; font-size: 0.72rem; color: var(--sheikah-green); margin-top: 10px;">🧪 Comprobación en Consola</div>
+                    <div class="terminal-verify">&gt;&gt;&gt; a = Arma(103, "Espada de Fuego", "fuego", 24, 5, 5)
+&gt;&gt;&gt; print(a)
+Espada de Fuego [FUEGO] Atq:24 Dur:[█████] (5/5)
+&gt;&gt;&gt; a.desgastar(4)
+False
+&gt;&gt;&gt; a.desgastar(1)      # ¡Último golpe!
+True
+&gt;&gt;&gt; a.esta_rota()
+True</div>
+
+                    <button class="shrine-complete-btn" type="button">
+                        <span>🔵</span> Conseguir Orbe del Santuario 1
+                    </button>
+                </article>
+
+                <!-- PASO 2 -->
+                <article class="step-card" id="paso2" data-step="2" data-pts="1.0">
+                    <div class="step-top">
+                        <div class="step-title-group">
+                            <h3>PASO 2 · SANTUARIO DE JA NEHIR</h3>
+                            <div class="step-subtitle">La Forja Ancestral: Factoría de Armas</div>
+                        </div>
+                        <div class="step-badges">
+                            <span class="tag-badge tag-gold">1.0 Punto</span>
+                            <span class="tag-badge">⏱️ ~15 min</span>
+                            <span class="tag-badge tag-orange">Patrón Factoría</span>
+                        </div>
+                    </div>
+
+                    <div class="card-banner" style="background-image: url('img/goron_forge_bg.png'); height: 130px;">
+                        <span class="card-banner-caption">FORJA ANCESTRAL DE HYRULE: FABRICACIÓN INDEPENDIENTE</span>
+                    </div>
+
+                    <div class="box-info">
+                        <span class="box-title">📘 Lo que debes saber de Hyrule</span>
+                        <p>
+                            Las forjas ancestrales leen los planos de las armas desde el catálogo central.
+                            Cada vez que Link adquiere un arma, se debe forjar un <strong>objeto nuevo e independiente</strong>:
+                            el desgaste de su espada no puede alterar el inventario de la tienda ni el de otros viajeros.
+                        </p>
+                    </div>
+
+                    <div class="box-task">
+                        <span class="box-title">🧩 Lo que debes programar</span>
+                        <ul>
+                            <li>Una función independiente <code>fabricar_arma(id_arma: int) -&gt; Arma | None</code>.</li>
+                            <li>Busca el identificador en el diccionario global <code>CATALOGO_ARMAS</code>.</li>
+                            <li>Si existe, instancia y retorna un nuevo objeto <code>Arma</code> con sus estadísticas y la durabilidad actual al máximo.</li>
+                            <li>Si el ID no existe en el catálogo, debe mostrar un mensaje de advertencia amistoso por consola y retornar <code>None</code> (sin provocar excepciones ni que el programa se cuelgue).</li>
+                        </ul>
+                    </div>
+
+                    <div style="font-family: 'Press Start 2P', monospace; font-size: 0.72rem; color: var(--sheikah-green); margin-top: 10px;">🧪 Comprobación en Consola</div>
+                    <div class="terminal-verify">&gt;&gt;&gt; a1 = fabricar_arma(101)
+&gt;&gt;&gt; a2 = fabricar_arma(101)
+&gt;&gt;&gt; a1 is a2, a1 == a2
+(False, True)         # Son dos objetos distintos en memoria con datos equivalentes
+&gt;&gt;&gt; a1.desgastar(5)
+&gt;&gt;&gt; a1.durabilidad_actual != a2.durabilidad_actual
+True
+&gt;&gt;&gt; fabricar_arma(999)
+⚠️  El arma con ID 999 no existe en la forja ancestral.</div>
+
+                    <button class="shrine-complete-btn" type="button">
+                        <span>🔵</span> Conseguir Orbe del Santuario 2
+                    </button>
+                </article>
+
+                <!-- PASO 3 -->
+                <article class="step-card" id="paso3" data-step="3" data-pts="1.5">
+                    <div class="step-top">
+                        <div class="step-title-group">
+                            <h3>PASO 3 · SANTUARIO DE KADUN</h3>
+                            <div class="step-subtitle">La Clase <code>Guerrero</code> (Héroe y Criaturas)</div>
+                        </div>
+                        <div class="step-badges">
+                            <span class="tag-badge tag-gold">1.5 Puntos</span>
+                            <span class="tag-badge">⏱️ ~25 min</span>
+                            <span class="tag-badge tag-orange">Clases y Métodos</span>
+                        </div>
+                    </div>
+
+                    <div class="box-info">
+                        <span class="box-title">📘 Lo que debes saber de Hyrule</span>
+                        <p>
+                            Tanto Link como los enemigos que pueblan Hyrule comparten atributos biológicos:
+                            vitalidad máxima y actual, armadura/defensa y afinidad elemental (un Lizalfos ígneo es afín al fuego;
+                            un monstruo del abismo es afín a las sombras).
+                        </p>
+                    </div>
+
+                    <div class="box-task">
+                        <span class="box-title">🧩 Lo que debes programar</span>
+                        <ul>
+                            <li>Clase <code>Guerrero</code> con constructor:
+                                <code>__init__(self, nombre: str, vida_max: int, defensa_base: int, elemento_afin: str = "fisico")</code>.
+                            </li>
+                            <li>Atributos de instancia: <code>nombre</code>, <code>vida_max</code>, <code>vida_actual</code> (inicializada en <code>vida_max</code>), <code>defensa_base</code> y <code>elemento_afin</code>.</li>
+                            <li>Método <code>esta_vivo(self) -&gt; bool</code>: <code>vida_actual &gt; 0</code>.</li>
+                            <li>Método <code>recibir_danio(self, cantidad: int) -&gt; int</code>: aplica la fórmula de amortiguación:
+                                <code>danio_real = max(1, cantidad - (self.defensa_base // 3))</code>. Resta a la vida sin bajar de 0 y <strong>devuelve el daño real recibido</strong>.
+                            </li>
+                            <li>Método <code>curar(self, cantidad: int) -&gt; int</code>: recupera vida sin superar nunca <code>vida_max</code> y devuelve la cantidad efectiva recuperada.</li>
+                            <li>Método <code>barra_vida(self) -&gt; str</code>: representación gráfica de la vida usando corazones <code>❤️</code> (cada corazón = 20 PS, con corazones vacíos <code>🖤</code>).</li>
+                            <li>Método <code>__str__(self) -&gt; str</code>: ficha técnica con nombre, elemento, corazones y defensa.</li>
+                        </ul>
+                    </div>
+
+                    <div style="font-family: 'Press Start 2P', monospace; font-size: 0.72rem; color: var(--sheikah-green); margin-top: 10px;">🧪 Comprobación en Consola</div>
+                    <div class="terminal-verify">&gt;&gt;&gt; link = Guerrero("Link", 80, 12, "fisico")
+&gt;&gt;&gt; print(link)
+Link [FISICO] | ❤️ ❤️ ❤️ ❤️  (80/80 PS) | Def:12
+&gt;&gt;&gt; danio = link.recibir_danio(34)      # 34 - (12 // 3) = 30
+&gt;&gt;&gt; print(danio, link.vida_actual)
+30 50
+&gt;&gt;&gt; link.curar(200); link.vida_actual
+80</div>
+
+                    <button class="shrine-complete-btn" type="button">
+                        <span>🔵</span> Conseguir Orbe del Santuario 3
+                    </button>
+                </article>
+
+                <!-- PASO 4 -->
+                <article class="step-card" id="paso4" data-step="4" data-pts="1.5">
+                    <div class="step-top">
+                        <div class="step-title-group">
+                            <h3>PASO 4 · SANTUARIO DE MYAHM AGANA</h3>
+                            <div class="step-subtitle">Fórmulas de Combate y Reacciones Elementales</div>
+                        </div>
+                        <div class="step-badges">
+                            <span class="tag-badge tag-gold">1.5 Puntos</span>
+                            <span class="tag-badge">⏱️ ~25 min</span>
+                            <span class="tag-badge tag-orange">Tuplas & Fórmulas</span>
+                        </div>
+                    </div>
+
+                    <div class="box-info">
+                        <span class="box-title">📘 Lo que debes saber de Hyrule</span>
+                        <p>
+                            El daño asestado combina el filo del arma, la vulnerabilidad del rival, una leve variación aleatoria
+                            y la fortuna de un <strong>golpe crítico</strong> (15% de probabilidad de asestar ×1.5 de daño).
+                        </p>
+                    </div>
+
+                    <div class="box-task">
+                        <span class="box-title">🧩 Lo que debes programar</span>
+                        <ul>
+                            <li>Función <code>calcular_danio_combate(arma: Arma, atacante: Guerrero, defensor: Guerrero) -&gt; tuple[int, float, bool]</code>.</li>
+                            <li>Consulta en <code>TABLA_ELEMENTAL</code> la tupla <code>(arma.elemento, defensor.elemento_afin)</code>. Si no está en el diccionario, el multiplicador base es <code>1.0</code>.</li>
+                            <li>Genera con <code>random.random() &lt; 0.15</code> si ocurre un golpe crítico (factor <code>1.5</code> si es crítico, <code>1.0</code> si no).</li>
+                            <li>Aplica una fluctuación con <code>random.uniform(0.90, 1.10)</code>.</li>
+                            <li>Fórmula de daño bruto:
+                                <code>danio_bruto = arma.ataque_base * multiplicador * factor_critico * variacion</code>.
+                            </li>
+                            <li>Devuelve la tupla <code>(danio_final, multiplicador, es_critico)</code> donde <code>danio_final = max(1, int(danio_bruto))</code>.</li>
+                        </ul>
+                    </div>
+
+                    <div style="font-family: 'Press Start 2P', monospace; font-size: 0.72rem; color: var(--sheikah-green); margin-top: 10px;">🧪 Comprobación en Consola</div>
+                    <div class="terminal-verify">&gt;&gt;&gt; espada_fuego = fabricar_arma(103)
+&gt;&gt;&gt; lizalfos_hielo = Guerrero("Lizalfos Gélido", 120, 8, "hielo")
+&gt;&gt;&gt; link = Guerrero("Link", 80, 10, "fisico")
+&gt;&gt;&gt; danio, multi, crit = calcular_danio_combate(espada_fuego, link, lizalfos_hielo)
+&gt;&gt;&gt; multi
+2.0                # Fuego vs Hielo siempre duplica el daño
+&gt;&gt;&gt; danio >= 43    # 24 * 2.0 * ~0.95 = ~45.6
+True</div>
+
+                    <button class="shrine-complete-btn" type="button">
+                        <span>🔵</span> Conseguir Orbe del Santuario 4
+                    </button>
+                </article>
+
+                <!-- PASO 5 -->
+                <article class="step-card" id="paso5" data-step="5" data-pts="1.5">
+                    <div class="step-top">
+                        <div class="step-title-group">
+                            <h3>PASO 5 · SANTUARIO DE HIKATHE</h3>
+                            <div class="step-subtitle">La Alforja de Link (Gestión de Inventario)</div>
+                        </div>
+                        <div class="step-badges">
+                            <span class="tag-badge tag-gold">1.5 Puntos</span>
+                            <span class="tag-badge">⏱️ ~25 min</span>
+                            <span class="tag-badge tag-orange">Gestión de Inventario</span>
+                        </div>
+                    </div>
+
+                    <div class="card-banner" style="background-image: url('img/link_pouch_bg.png'); height: 130px;">
+                        <span class="card-banner-caption">ALFORJA DE LINK: GESTIÓN DE RANURAS Y DESGASTE</span>
+                    </div>
+
+                    <div class="box-info">
+                        <span class="box-title">📘 Lo que debes saber de Hyrule</span>
+                        <ul>
+                            <li>La alforja de Link tiene ranuras limitadas (por defecto, <strong>máximo 5 armas</strong>).</li>
+                            <li>Link tiene en mano un <strong>arma equipada activa</strong> (señalada por su índice).</li>
+                            <li>Cuando un arma se rompe, se retira de la alforja. Si se rompe el arma activa, se ajusta el índice al arma restante.</li>
+                        </ul>
+                    </div>
+
+                    <div class="box-task">
+                        <span class="box-title">🧩 Lo que debes programar</span>
+                        <ul>
+                            <li>Clase <code>Alforja</code> con constante de clase <code>CAPACIDAD_MAX = 5</code>.</li>
+                            <li>Constructor: inicializa la lista interna <code>self.armas: list[Arma] = []</code> y <code>self.indice_equipada: int = 0</code>.</li>
+                            <li><code>guardar_arma(self, arma: Arma) -&gt; bool</code>: si <code>len(self.armas) &gt;= self.CAPACIDAD_MAX</code>, avisa por consola de que la alforja está llena y retorna <code>False</code>. De lo contrario, la añade a la lista y retorna <code>True</code>.</li>
+                            <li><code>arma_equipada(self) -&gt; Arma | None</code>: devuelve el objeto <code>Arma</code> en la posición <code>indice_equipada</code>, o <code>None</code> si la alforja está vacía.</li>
+                            <li><code>cambiar_arma(self, indice: int) -&gt; bool</code>: cambia el arma activa si el índice es válido (<code>0 &lt;= indice &lt; len(armas)</code>). Si es inválido, muestra error y retorna <code>False</code>.</li>
+                            <li><code>retirar_rota(self) -&gt; Arma | None</code>: si el arma equipada tiene <code>esta_rota() == True</code>, la elimina de la alforja, reajusta el índice si es necesario, anuncia que se ha roto en mil pedazos y la devuelve.</li>
+                            <li><code>mostrar_alforja(self) -&gt; None</code>: imprime el listado numerado indicando cuál está <code>[EQUIPADA]</code>.</li>
+                        </ul>
+                    </div>
+
+                    <div style="font-family: 'Press Start 2P', monospace; font-size: 0.72rem; color: var(--sheikah-green); margin-top: 10px;">🧪 Comprobación en Consola</div>
+                    <div class="terminal-verify">&gt;&gt;&gt; alforja = Alforja()
+&gt;&gt;&gt; alforja.guardar_arma(fabricar_arma(101))
+&gt;&gt;&gt; alforja.guardar_arma(fabricar_arma(103))
+&gt;&gt;&gt; alforja.arma_equipada().nombre
+'Espada de Viajero'
+&gt;&gt;&gt; alforja.cambiar_arma(1)
+🗡️ Has empuñado: Espada de Fuego
+&gt;&gt;&gt; alforja.arma_equipada().nombre
+'Espada de Fuego'</div>
+
+                    <button class="shrine-complete-btn" type="button">
+                        <span>🔵</span> Conseguir Orbe del Santuario 5
+                    </button>
+                </article>
+
+                <!-- PASO 6 -->
+                <article class="step-card" id="paso6" data-step="6" data-pts="1.5">
+                    <div class="step-top">
+                        <div class="step-title-group">
+                            <h3>PASO 6 · SANTUARIO DE ROHA</h3>
+                            <div class="step-subtitle">La Clase <code>CombateHyrule</code>: El Motor de Turnos</div>
+                        </div>
+                        <div class="step-badges">
+                            <span class="tag-badge tag-gold">1.5 Puntos</span>
+                            <span class="tag-badge">⏱️ ~25 min</span>
+                            <span class="tag-badge tag-orange">Simulador de Turnos</span>
+                        </div>
+                    </div>
+
+                    <div class="box-info">
+                        <span class="box-title">📘 Lo que debes saber de Hyrule: Anatomía de un Turno</span>
+                        <ol style="margin-left: 20px;">
+                            <li>Comienza el turno mostrando el estado vital de Link y del monstruo.</li>
+                            <li>Link actúa: si ataca con arma, esta se desgasta. Si se rompe, se retira de la alforja.</li>
+                            <li>Si el enemigo cae derrotado, el combate finaliza con victoria de Hyrule.</li>
+                            <li>Si el monstruo sobrevive, lanza su contraataque dañando a Link.</li>
+                            <li>Si la vida de Link cae a 0, termina con derrota.</li>
+                        </ol>
+                    </div>
+
+                    <div class="box-task">
+                        <span class="box-title">🧩 Lo que debes programar</span>
+                        <ul>
+                            <li>Clase <code>CombateHyrule</code> que reciba en su constructor:
+                                <code>(heroe: Guerrero, alforja: Alforja, monstruo: Guerrero)</code>.
+                            </li>
+                            <li>Atributo <code>self.turno = 1</code>.</li>
+                            <li>Método <code>ejecutar_ataque_heroe(self) -&gt; int</code>: calcula el daño del arma equipada (o daño desarmado de 4 PS si no tiene arma), desgasta el arma, retira el arma si se rompió y aplica el daño al monstruo narrando el suceso.</li>
+                            <li>Método <code>turno_monstruo(self) -&gt; None</code>: genera un ataque hostil (daño aleatorio entre <code>monstruo.ataque - 4</code> y <code>monstruo.ataque + 6</code>) y aplica el daño real a Link.</li>
+                            <li>Bucle de control en <code>iniciar(self) -&gt; str</code>: bucle <code>while heroe.esta_vivo() and monstruo.esta_vivo()</code> que coordina el enfrentamiento y devuelve <code>"victoria"</code> o <code>"derrota"</code>.</li>
+                        </ul>
+                    </div>
+
+                    <div style="font-family: 'Press Start 2P', monospace; font-size: 0.72rem; color: var(--sheikah-green); margin-top: 10px;">🧪 Comprobación en Consola</div>
+                    <div class="terminal-verify">=================================================================
+⚔️ TURNO 1: Link VS Bokoblin Carmesí
+Link: ❤️ ❤️ ❤️ ❤️  (80/80 PS) | Enemigo: ❤️ ❤️ ❤️ 🖤  (72/72 PS)
+Arma en mano: Mandoble Real (Atq:38 | Dur:36/36)
+⚔️ ¡Link ataca con Mandoble Real!
+💥 ¡Bokoblin Carmesí recibe 37 de daño!
+👹 ¡Bokoblin Carmesí contraataca furiosamente!
+🛡️ ¡Link recibe 14 de daño! ❤️ ❤️ ❤️ 🖤  (66/80 PS)
+=================================================================</div>
+
+                    <button class="shrine-complete-btn" type="button">
+                        <span>🔵</span> Conseguir Orbe del Santuario 6
+                    </button>
+                </article>
+
+                <!-- PASO 7 -->
+                <article class="step-card" id="paso7" data-step="7" data-pts="1.5">
+                    <div class="step-top">
+                        <div class="step-title-group">
+                            <h3>PASO 7 · TEMPLO DEL TIEMPO</h3>
+                            <div class="step-subtitle">Menú Interactivo, <code>input()</code> y Control con <code>try/except</code></div>
+                        </div>
+                        <div class="step-badges">
+                            <span class="tag-badge tag-gold">1.5 Puntos</span>
+                            <span class="tag-badge">⏱️ ~20 min</span>
+                            <span class="tag-badge tag-orange">Excepciones & Menú</span>
+                        </div>
+                    </div>
+
+                    <div class="box-info">
+                        <span class="box-title">📘 Lo que debes saber de Hyrule</span>
+                        <p>
+                            En cada turno, el usuario toma decisiones interactivas por teclado: puede atacar,
+                            abrir la alforja y cambiar de arma, curarse comiendo alimentos de la reserva o intentar huir.
+                            Si el alumno o jugador escribe letras en vez de números, el programa debe capturar el error con gracia.
+                        </p>
+                    </div>
+
+                    <div class="box-task">
+                        <span class="box-title">🧩 Lo que debes programar</span>
+                        <ul>
+                            <li>Integrar un menú en cada turno de Link con las 4 opciones:
+                                <br><code>[1] Atacar con arma equipada</code>
+                                <br><code>[2] Cambiar arma de la alforja</code>
+                                <br><code>[3] Comer Manzana Asada / Elixir (Recupera 30 PS)</code>
+                                <br><code>[4] Huir del combate</code>
+                            </li>
+                            <li>En la opción 2 (cambio de arma), solicitar el número de arma a equipar y proteger la conversión con <code>try ... except ValueError</code>: si escribe texto no numérico, avisa con <code>"⚠️ Entrada inválida: introduce un número"</code> sin abortar el programa.</li>
+                            <li>Comprobar con condiciones que el número seleccionado corresponda a una ranura existente.</li>
+                            <li>Función <code>main()</code> que prepare a Link con 3 armas en su alforja, instancie a un enemigo del bestiario e inicie el combate.</li>
+                        </ul>
+                    </div>
+
+                    <div style="font-family: 'Press Start 2P', monospace; font-size: 0.72rem; color: var(--sheikah-green); margin-top: 10px;">🧪 Comprobación en Consola</div>
+                    <div class="terminal-verify">Elige tu acción:
+  1. Atacar con arma
+  2. Cambiar de arma
+  3. Comer manzana asada (+30 PS)
+  4. Huir
+Introduce opción (1-4): dos
+❌ Opción inválida. Elige 1, 2, 3 o 4.
+Introduce opción (1-4): 2
+--- 🎒 ALFORJA DE HYRULE ---
+ 👉 [EQUIPADA] [1] Espada de Viajero [FISICO] Atq:16 Dur:[██████████] (20/20)
+    [2] Espada de Fuego [FUEGO] Atq:24 Dur:[██████████████] (28/28)
+Elige número de arma a equipar: abc
+⚠️ Error: Introduce un número válido.</div>
+
+                    <button class="shrine-complete-btn" type="button">
+                        <span>🔵</span> Conseguir Orbe del Santuario 7
+                    </button>
+                </article>
+
+                <!-- PASO BONUS -->
+                <article class="step-card" id="bonus" data-step="8" data-pts="1.0" style="border-color: var(--sheikah-gold);">
+                    <div class="step-top">
+                        <div class="step-title-group">
+                            <h3 style="color: var(--sheikah-gold);">⭐ PASO BONUS · EL CALDERO ANCESTRAL</h3>
+                            <div class="step-subtitle">Sistema de Cocina y Efectos de Estado</div>
+                        </div>
+                        <div class="step-badges">
+                            <span class="tag-badge tag-gold">+1.0 Punto Extra</span>
+                            <span class="tag-badge">Opcional</span>
+                        </div>
+                    </div>
+
+                    <div class="box-task">
+                        <span class="box-title">🧩 Lo que debes programar para el punto extra</span>
+                        <ul>
+                            <li>Crea una <code>@dataclass PlatoCocinado(nombre: str, curacion: int, buff_ataque: int, usos: int)</code>.</li>
+                            <li>Añade a Link una lista de <code>platos_mochila: list[PlatoCocinado]</code>.</li>
+                            <li>Al consumir un plato en el menú, se cura los PS y durante los siguientes turnos sus ataques suman el <code>buff_ataque</code>.</li>
+                        </ul>
+                    </div>
+
+                    <button class="shrine-complete-btn" type="button" style="border-color: var(--sheikah-gold);">
+                        <span>⭐</span> Registrar Orbe de Maestría Bonus (+1.0)
+                    </button>
+                </article>
+            </section>
+
+            <!-- ====================== RÚBRICA DE EVALUACIÓN ====================== -->
+            <section class="card" id="rubrica">
+                <div class="card-header">
+                    <h2>🧮 RÚBRICA DE EVALUACIÓN OFICIAL (10 PUNTOS + 1 EXTRA)</h2>
+                    <span class="tag-badge">Baremo Académico · Especialización IA y Big Data (7RO)</span>
+                </div>
+                <table class="rubric-table">
+                    <thead>
+                        <tr>
+                            <th>Criterio / Paso</th>
+                            <th>Puntos</th>
+                            <th>Excelente (100%)</th>
+                            <th>Mejorable (50%)</th>
+                            <th>No Apto (0%)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>1. Dataclass Arma</strong></td>
+                            <td>1.5 pts</td>
+                            <td>Tipado riguroso, métodos <code>esta_rota</code> y <code>desgastar</code> exactos, representación visual <code>__str__</code> con barras.</td>
+                            <td>Faltan type hints o el valor booleano al romperse no se calcula bien.</td>
+                            <td>No usa <code>@dataclass</code> o la clase no funciona.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>2. Factoría Forja</strong></td>
+                            <td>1.0 pt</td>
+                            <td>Genera instancias independientes sin referencias compartidas, control seguro de ID ausente sin excepciones.</td>
+                            <td>Devuelve el mismo objeto compartido o produce fallos de clave con IDs no catalogados.</td>
+                            <td>Función no implementada o errores de sintaxis.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>3. Clase Guerrero</strong></td>
+                            <td>1.5 pts</td>
+                            <td>Cálculo de amortiguamiento con división entera, límites máximos/mínimos respetados en vida y corazones dinámicos.</td>
+                            <td>La vida baja de 0 o la curación excede la salud máxima.</td>
+                            <td>Clase ausente o métodos con errores.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>4. Fórmulas Combate</strong></td>
+                            <td>1.5 pts</td>
+                            <td>Consulta correcta en diccionario de tuplas, multiplicador por defecto, azar crítico y fluctuación matemática impecable.</td>
+                            <td>Cálculo plano sin variación o errores al buscar pares elementales neutros.</td>
+                            <td>No implementa cálculo de ventajas elementales.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>5. Alforja Inventario</strong></td>
+                            <td>1.5 pts</td>
+                            <td>Límite estricto de capacidad respetado, selección segura de índice, eliminación limpia de armas rotas.</td>
+                            <td>Permite superar la capacidad máxima o produce errores de índice.</td>
+                            <td>No gestiona la lista ni el arma equipada.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>6. Motor Turnos</strong></td>
+                            <td>1.5 pts</td>
+                            <td>Bucle de combate fluido, sincronización de desgaste, derrota/victoria y mensajes descriptivos por turno.</td>
+                            <td>El turno no se detiene al morir un combatiente o no se desgasta el arma.</td>
+                            <td>Bucle infinito o no simula el enfrentamiento.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>7. Menú y Excepciones</strong></td>
+                            <td>1.5 pts</td>
+                            <td>Entrada con <code>input()</code> interactiva, captura limpia de <code>ValueError</code> y validaciones de rango.</td>
+                            <td>El menú funciona pero si se introduce una letra se rompe la consola.</td>
+                            <td>No hay menú ni gestión de errores.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>⭐ Bonus Cocina</strong></td>
+                            <td>+1.0 pt</td>
+                            <td>Platos cocinados funcionales que aplican curación y aumentos temporales de ataque.</td>
+                            <td>Platos definidos pero sin integración con el combate.</td>
+                            <td>No realizado.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- ====================== ZONA SECRETA GG (EASTER EGG HOVER) ====================== -->
+            <div class="secret-trigger-zone" id="triggerZone" title="Coloca el cursor aquí y escribe la combinación secreta">
+                <svg class="secret-eye-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Ojo Sheikah Ancestral -->
+                    <path d="M15 50 Q50 15 85 50 Q50 85 15 50 Z" stroke="#00e5ff" stroke-width="4" fill="rgba(0, 229, 255, 0.08)"/>
+                    <circle cx="50" cy="50" r="14" fill="#00e5ff"/>
+                    <circle cx="50" cy="50" r="6" fill="#051933"/>
+                    <path d="M50 64 L50 92" stroke="#00e5ff" stroke-width="4" stroke-linecap="round"/>
+                    <path d="M50 12 L50 22" stroke="#00e5ff" stroke-width="4" stroke-linecap="round"/>
+                    <circle cx="50" cy="95" r="3" fill="#ff7700"/>
+                </svg>
+                <div class="secret-title">PEDESTAL DEL OJO DE LA VERDAD</div>
+                <p style="color: var(--text-muted); font-size: 0.95rem;">
+                    Posa tu cursor sobre esta cámara ancestral para sintonizar las frecuencias de la Tableta Sheikah...
+                </p>
+                <div class="secret-status" id="secretStatus">
+                    Estado: Esperando sintonización de frecuencias...
+                </div>
+            </div>
+
+            <!-- ====================== IMAGEN SECRETA (gg) ====================== -->
+            <div class="gg-modal" id="ggModal" role="dialog" aria-modal="true" aria-label="Imagen secreta">
+                <div class="gg-frame">
+                    <button class="gg-close" id="ggClose" type="button" aria-label="Cerrar">✕</button>
+                    <img src="img/gg_secreto.png" alt="Imagen secreta de Hyrule" id="ggImage">
+                    <div class="gg-caption">🔓 SANTUARIO OCULTO DESBLOQUEADO · pulsa ESC para cerrar</div>
+                </div>
+            </div>
+
+            <!-- ====================== FICHA DEL COMPENDIO ====================== -->
+            <div class="gg-modal" id="entryModal" role="dialog" aria-modal="true" aria-label="Ficha del compendio">
+                <div class="gg-frame entry-frame">
+                    <button class="gg-close" id="entryClose" type="button" aria-label="Cerrar">✕</button>
+                    <div id="entryBody"></div>
+                </div>
+            </div>
+
+            <footer>
+                Curso de Especialización en Inteligencia Artificial y Big Data · Módulo 7RO · Programación en Python · Examen Práctico POO Hyrule · Tableta Sheikah OS
+            </footer>
+        </div>
+    </div>
+
+    <!-- ====================== SCRIPTS INTERACTIVOS ====================== -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
