@@ -1,0 +1,6 @@
+{"vehicle_id":"FGN-01","timestamp":"2026-10-14T08:00:00Z","speed_kmh":45,"engine_temp_c":91.2}
+{"vehicle_id":"FGN-02","timestamp":"2026-10-14T08:01:00Z","speed_kmh":62,"engine_temp_c":87.6}
+{"vehicle_id":"FGN-03","timestamp":"2026-10-14T08:02:00Z","speed_kmh":38,"engine_temp_c":96.1}
+{"vehicle_id":"FGN-04","timestamp":"2026-10-14T08:03:00Z","speed_kmh":71,"engine_temp_c":93.8}
+{"vehicle_id":"FGN-05","timestamp":"2026-10-14T08:04:00Z","speed_kmh":54,"engine_temp_c":89.4}
+{"vehicle_id":"FGN-06","timestamp":"2026-10-14T08:05:00Z","speed_kmh":29,"engine_temp_c":85.9}

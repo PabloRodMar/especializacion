@@ -36,7 +36,7 @@ event_id,vehicle_id,event_time,event_date,delegacion,modelo,engine_temp_c,speed_
 35,FGN-4258,2026-09-01T00:11:54Z,2026-09-01,Bilbao,Electrica-E,91.0,97,2.09,,,ok
 36,FGN-4295,2026-09-01T00:12:15Z,2026-09-01,Sevilla,Electrica-E,85.2,114,1.21,,,ok
 37,FGN-4332,2026-09-01T00:12:36Z,2026-09-01,Madrid,Electrica-E,90.4,50,1.85,,,ok
-38,FGN-4369,2026-09-01T00:12:57Z,2026-09-01,Las Palmas,Electrica-E,86.0,53,1.62,,,revisar, sensor inestable
+38,FGN-4369,2026-09-01T00:12:57Z,2026-09-01,Las Palmas,Electrica-E,86.0,53,1.62,,,"revisar, sensor inestable"
 39,FGN-4406,2026-09-01T00:13:18Z,2026-09-01,Bilbao,Electrica-E,90.1,91,2.74,,,ok
 40,FGN-4443,2026-09-01T00:13:39Z,2026-09-01,Sevilla,Electrica-E,87.5,60,1.69,,,ok
 41,FGN-4480,2026-09-01T00:14:00Z,2026-09-01,Madrid,Electrica-E,90.4,67,2.37,,,ok

@@ -1,0 +1,10 @@
+{"vehicle_id":"FGN-01","timestamp":"2026-10-15T08:00:00Z","speed_kmh":45.0,"engine_temp_c":91.2}
+{"vehicle_id":"FGN-02","timestamp":"2026-10-15T08:01:00Z","speed_kmh":62.0,"engine_temp_c":"87.6"}
+{"vehicle_id":"FGN-03","timestamp":"2026-10-15T08:02:00Z","speed_kmh":38.0,"engine_temp_c":96.1}
+{"vehicle_id":"FGN-04","timestamp":"2026-10-15T08:03:00Z","speed_kmh":71.0,"engine_temp_c":93.8}
+{"vehicle_id":"FGN-05","timestamp":"2026-10-15T08:04:00Z","speed_kmh":54.0,"engine_temp_c":89.4}
+{"vehicle_id":"FGN-06","timestamp":"2026-10-15T08:05:00Z","speed_kmh":29.0,"engine_temp_c":85.9}
+{"vehicle_id":"FGN-07","timestamp":"2026-10-15T08:06:00Z","speed_kmh":83.0,"engine_temp_c":98.3}
+{"vehicle_id":"FGN-08","timestamp":"2026-10-15T08:07:00Z","speed_kmh":50.0,"engine_temp_c":90.7}
+{"vehicle_id":"FGN-09","timestamp":"2026-10-15T08:08:00Z","speed_kmh":null,"engine_temp_c":"88.5"}
+{"vehicle_id":"FGN-10","timestamp":"2026-10-15T08:09:00Z","speed_kmh":67.0,"engine_temp_c":94.2}

@@ -1,0 +1,10 @@
+{"sensor_id":"SENSOR-01","timestamp":"2026-10-15T09:00:00Z","temperature_c":100,"door_open":false,"battery_percent":95}
+{"sensor_id":"SENSOR-02","timestamp":"2026-10-15T09:01:00Z","temperature_c":4.6,"door_open":false,"battery_percent":88}
+{"sensor_id":"SENSOR-03","timestamp":"2026-10-15T09:02:00Z","temperature_c":6.1,"door_open":true,"battery_percent":76}
+{"sensor_id":"SENSOR-04","timestamp":"2026-10-15T09:03:00Z","temperature_c":5.8,"door_open":false,"battery_percent":82}
+{"sensor_id":"SENSOR-05","timestamp":"2026-10-15T09:04:00Z","temperature_c":3.9,"door_open":false,"battery_percent":64}
+{"sensor_id":"SENSOR-01","timestamp":"2026-10-15T09:05:00Z","temperature_c":4.3,"door_open":false,"battery_percent":94}
+{"sensor_id":"SENSOR-02","timestamp":"2026-10-15T09:06:00Z","temperature_c":7.5,"door_open":true,"battery_percent":87}
+{"sensor_id":"SENSOR-03","timestamp":"2026-10-15T09:07:00Z","temperature_c":6.4,"door_open":false,"battery_percent":75}
+{"sensor_id":"SENSOR-04","timestamp":"2026-10-15T09:08:00Z","temperature_c":5.5,"door_open":false,"battery_percent":null}
+{"sensor_id":"SENSOR-05","timestamp":"2026-10-15T09:09:00Z","temperature_c":4.0,"door_open":false,"battery_percent":63}
