@@ -166,7 +166,7 @@ class Pokemon:
 
             if eficacia != 0:
                 objetivo.recibir_danio(dano)
-                print(f"\n¡El {objetivo.nombre} rival ha recibido {dano} de daño. HP: {objetivo.hp_actual}/{objetivo.hp_max}")
+                print(f"¡El {objetivo.nombre} rival ha recibido {dano} de daño! HP: {objetivo.hp_actual}/{objetivo.hp_max}\n")
 
         else:
             print(f"\n¡{objetivo.nombre} ha evitado el ataque!")
@@ -210,9 +210,9 @@ class Entrenador:
     def pokemon_debilitado(self):
         if self.equipo[self.pokemon_actual].esta_debilitado():
             print(f"¡{self.equipo[self.pokemon_actual].nombre} se ha debilitado!")
-            print(f"Cambiando a {self.equipo[self.pokemon_actual + 1].nombre}")
-            self.equipo[self.pokemon_actual + 1]
-            self.equipo.pop(self.pokemon_actual - 1)
+            self.equipo.pop(self.pokemon_actual)
+            if self.equipo:
+                print(f"Cambiando a {self.equipo[self.pokemon_actual].nombre}\n")
 
 class Batalla:
     def __init__(self, entrenador: Entrenador, rival: Entrenador, turno = 1):
@@ -240,34 +240,57 @@ class Batalla:
 
         primer_ataque, segundo_ataque = self.determinar_orden()
 
-        primer_ataque.equipo[primer_ataque.pokemon_actual].atacar(segundo_ataque.equipo[segundo_ataque.pokemon_actual], mov_entrenador)
+        if primer_ataque is self.entrenador:
+            primer_mov = mov_entrenador
+            segundo_mov = mov_rival
+        else:
+            primer_mov = mov_rival
+            segundo_mov = mov_entrenador
 
-        if primer_ataque.equipo[primer_ataque.pokemon_actual].esta_debilitado():
-            primer_ataque.pokemon_debilitado()
-            primer_ataque.equipo[primer_ataque.pokemon_actual]
+        primer_ataque.equipo[primer_ataque.pokemon_actual].atacar(segundo_ataque.equipo[segundo_ataque.pokemon_actual], primer_mov)
 
-        segundo_ataque.equipo[segundo_ataque.pokemon_actual].atacar(primer_ataque.equipo[primer_ataque.pokemon_actual], mov_rival)
-
-        if segundo_ataque.equipo[segundo_ataque.pokemon_actual].esta_debilitado():
+        if segundo_ataque.equipo[primer_ataque.pokemon_actual].esta_debilitado():
             segundo_ataque.pokemon_debilitado()
-            segundo_ataque.equipo[segundo_ataque.pokemon_actual]
+            return
+
+        segundo_ataque.equipo[segundo_ataque.pokemon_actual].atacar(primer_ataque.equipo[primer_ataque.pokemon_actual], segundo_mov)
+
+        if primer_ataque.equipo[segundo_ataque.pokemon_actual].esta_debilitado():
+            primer_ataque.pokemon_debilitado()
 
     def ganador(self):
-        while self.entrenador.equipo or self.rival.equipo:
+        while self.entrenador.equipo and self.rival.equipo:
             return None
-        return False
+        if not self.rival.equipo:
+            return self.entrenador
+        else:
+            return self.rival
 
     def iniciar(self):
-        while not self.ganador():
+        print("============== ¡INICIO DEL COMBATE! ==============")
+        print(f"\n======= {self.entrenador.nombre} --- VS --- {self.rival.nombre} =======\n")
+
+        print(f"============== {self.entrenador.equipo[self.entrenador.pokemon_actual].nombre} VS {self.rival.equipo[self.rival.pokemon_actual].nombre} ==============\n")
+
+        while self.ganador() is None:
+            print(f"============ TURNO {self.turno} ============")
             self.ejecutar_turno()
+            self.turno += 1
 
-p1 = Pokemon("Venusaur", 50, [10, 11, 3, 1, 2])
-p2 = Pokemon("Pikachu", 50, [10, 11, 3, 1, 2])
+        print("\n\n=================== FIN DEL COMBATE ===================\n")
 
-p3 = Pokemon("Charizard", 50, [10, 11, 3, 1, 2])
-p4 = Pokemon("Pikachu", 50, [10, 11, 3, 1, 2])
+        if self.ganador() == self.entrenador:
+            print(f"¡El entrenador {self.rival.nombre} se ha quedado sin pokémons! ¡{self.entrenador.nombre} gana el combate!")
+        else:
+            print(f"¡El entrenador {self.entrenador.nombre} se ha quedado sin pokémons! ¡{self.rival.nombre} gana el combate!")
 
-e1 = Entrenador("Yo", True, [p1, p2])
+p1 = Pokemon("Venusaur", 50, [10, 11, 3, 1])
+p2 = Pokemon("Pikachu", 50, [10, 11, 3, 2])
+
+p3 = Pokemon("Charizard", 50, [10, 11, 3, 2])
+p4 = Pokemon("Pikachu", 50, [10, 11, 3, 2])
+
+e1 = Entrenador("Pablo", True, [p1, p2])
 e2 = Entrenador("N", True, [p3, p4])
 
 combate = Batalla(e1, e2)
