@@ -273,7 +273,7 @@ class Batalla:
         print(f"============== {self.entrenador.equipo[self.entrenador.pokemon_actual].nombre} VS {self.rival.equipo[self.rival.pokemon_actual].nombre} ==============\n")
 
         while self.ganador() is None:
-            print(f"============ TURNO {self.turno} ============")
+            print(f"===================== TURNO {self.turno} =====================")
             self.ejecutar_turno()
             self.turno += 1
 
