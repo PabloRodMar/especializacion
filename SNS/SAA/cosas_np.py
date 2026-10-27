@@ -23,6 +23,8 @@ d = np.array([[[1, 2, 3], [4, 5, 6]], [[7, 8, 9], [10, 11, 12]]])
 arr = np.array([1, 2, 3, 4], ndmin=5)
 print("Número de dimensiones: ",arr.ndim)
 
+qwe
+
 # arr = np.array([1, 2, 3, 4])
 # print(arr[0])
 
