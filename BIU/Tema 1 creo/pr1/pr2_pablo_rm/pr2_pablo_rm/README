@@ -1,0 +1,17 @@
+﻿Para Lorena: Las primeras líneas con los sensores 7 y 8 en camara_frio_60000.ndjson las modifiqué para comprobar 
+que los detectores de errores funcionaban y dar más variedad a los tipos de errores en eventos_rechazados.ndjson
+(ya que en el archivo original no había errores ni de json ni de esquema)
+
+Hago la aclarición porque los números que dan en la práctica son distintos a los míos.
+
+Y hago un README porque, para mi sorpresa, en ndjson no se pueden poner comentarios.
+
+CAMBIOS:
+
+Consulta 1 resuelta:
+
+Esperado 59160 ----> El mío 59158 (por la modificación mencionada)
+
+Consulta 2: 
+
+Todo bien menos en la primera que tengo 2 menos, por lo mencionado

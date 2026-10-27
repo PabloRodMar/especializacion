@@ -1,0 +1,842 @@
+{"linea": 1, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 2, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 19}}
+{"linea": 3, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 4.25, "battery_percent": 110}}
+{"linea": 6, "tipo": "formato", "motivo": ["Illegal trailing comma before end of object: line 1 column 120 (char 119)"], "evento": "{\"sensor_id\":\"SENSOR-06\",\"timestamp\":\"2026-10-01T00:03:35Z\",\"temperature_c\":4.76,\"door_open\":false,\"battery_percent\":23, }\n"}
+{"linea": 7, "tipo": "esquema", "motivo": ["[\n  \"EventoCamaraFrigorifica.door_open is <Hola> of type <class 'str'> expected boolean\"\n]"], "evento": {"sensor_id": "SENSOR-07", "timestamp": "2026-10-01T00:04:18Z", "temperature_c": 4.93, "door_open": "Hola", "battery_percent": 24}}
+{"linea": 201, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 202, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 47}}
+{"linea": 253, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 5.78, "battery_percent": 110}}
+{"linea": 401, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 402, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 75}}
+{"linea": 503, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 4.9, "battery_percent": 110}}
+{"linea": 601, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 602, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 17}}
+{"linea": 753, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 4.02, "battery_percent": 110}}
+{"linea": 801, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 802, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 45}}
+{"linea": 1001, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 1002, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 73}}
+{"linea": 1003, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 5.55, "battery_percent": 110}}
+{"linea": 1201, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 1202, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 15}}
+{"linea": 1253, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 4.67, "battery_percent": 110}}
+{"linea": 1401, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 1402, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 43}}
+{"linea": 1503, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 6.2, "battery_percent": 110}}
+{"linea": 1601, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 1602, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 71}}
+{"linea": 1753, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 5.32, "battery_percent": 110}}
+{"linea": 1801, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 1802, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 99}}
+{"linea": 2001, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 2002, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 22}}
+{"linea": 2003, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 4.36, "battery_percent": 110}}
+{"linea": 2201, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 2202, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 50}}
+{"linea": 2253, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 5.89, "battery_percent": 110}}
+{"linea": 2401, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 2402, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 78}}
+{"linea": 2503, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 5.01, "battery_percent": 110}}
+{"linea": 2601, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 2602, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 20}}
+{"linea": 2753, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 4.13, "battery_percent": 110}}
+{"linea": 2801, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 2802, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 48}}
+{"linea": 3001, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 3002, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 76}}
+{"linea": 3003, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 5.66, "battery_percent": 110}}
+{"linea": 3201, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 3202, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 18}}
+{"linea": 3253, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 4.78, "battery_percent": 110}}
+{"linea": 3401, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 3402, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 46}}
+{"linea": 3503, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 3.9, "battery_percent": 110}}
+{"linea": 3601, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 3602, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 74}}
+{"linea": 3753, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 5.43, "battery_percent": 110}}
+{"linea": 3801, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 3802, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 16}}
+{"linea": 4001, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 4002, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 25}}
+{"linea": 4003, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 4.47, "battery_percent": 110}}
+{"linea": 4201, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 4202, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 53}}
+{"linea": 4253, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 6.0, "battery_percent": 110}}
+{"linea": 4401, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 4402, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 81}}
+{"linea": 4503, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 5.12, "battery_percent": 110}}
+{"linea": 4601, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 4602, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 23}}
+{"linea": 4753, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 4.24, "battery_percent": 110}}
+{"linea": 4801, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 4802, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 51}}
+{"linea": 5001, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 5002, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 79}}
+{"linea": 5003, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 5.77, "battery_percent": 110}}
+{"linea": 5201, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 5202, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 21}}
+{"linea": 5253, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 4.89, "battery_percent": 110}}
+{"linea": 5401, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 5402, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 49}}
+{"linea": 5503, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 4.01, "battery_percent": 110}}
+{"linea": 5601, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 5602, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 77}}
+{"linea": 5753, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 5.54, "battery_percent": 110}}
+{"linea": 5801, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 5802, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 19}}
+{"linea": 6001, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 6002, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 28}}
+{"linea": 6003, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 4.58, "battery_percent": 110}}
+{"linea": 6201, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 6202, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 56}}
+{"linea": 6253, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 6.11, "battery_percent": 110}}
+{"linea": 6401, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 6402, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 84}}
+{"linea": 6503, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 5.23, "battery_percent": 110}}
+{"linea": 6601, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 6602, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 26}}
+{"linea": 6753, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 4.35, "battery_percent": 110}}
+{"linea": 6801, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 6802, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 54}}
+{"linea": 7001, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 7002, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 82}}
+{"linea": 7003, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 5.88, "battery_percent": 110}}
+{"linea": 7201, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 7202, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 24}}
+{"linea": 7253, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 5.0, "battery_percent": 110}}
+{"linea": 7401, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 7402, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 52}}
+{"linea": 7503, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 4.12, "battery_percent": 110}}
+{"linea": 7601, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 7602, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 80}}
+{"linea": 7753, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 5.65, "battery_percent": 110}}
+{"linea": 7801, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 7802, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 22}}
+{"linea": 8001, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 8002, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 31}}
+{"linea": 8003, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 4.69, "battery_percent": 110}}
+{"linea": 8201, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 8202, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 59}}
+{"linea": 8253, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 3.81, "battery_percent": 110}}
+{"linea": 8401, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 8402, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 87}}
+{"linea": 8503, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 5.34, "battery_percent": 110}}
+{"linea": 8601, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 8602, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 29}}
+{"linea": 8753, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 4.46, "battery_percent": 110}}
+{"linea": 8801, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 8802, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 57}}
+{"linea": 9001, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 9002, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 85}}
+{"linea": 9003, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 5.99, "battery_percent": 110}}
+{"linea": 9201, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 9202, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 27}}
+{"linea": 9253, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 5.11, "battery_percent": 110}}
+{"linea": 9401, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 9402, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 55}}
+{"linea": 9503, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 4.23, "battery_percent": 110}}
+{"linea": 9601, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 9602, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 83}}
+{"linea": 9753, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 5.76, "battery_percent": 110}}
+{"linea": 9801, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 9802, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 25}}
+{"linea": 10001, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 10002, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 34}}
+{"linea": 10003, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 4.8, "battery_percent": 110}}
+{"linea": 10201, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 10202, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 62}}
+{"linea": 10253, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 3.92, "battery_percent": 110}}
+{"linea": 10401, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 10402, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 90}}
+{"linea": 10503, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 5.45, "battery_percent": 110}}
+{"linea": 10601, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 10602, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 32}}
+{"linea": 10753, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 4.57, "battery_percent": 110}}
+{"linea": 10801, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 10802, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 60}}
+{"linea": 11001, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 11002, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 88}}
+{"linea": 11003, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 6.1, "battery_percent": 110}}
+{"linea": 11201, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 11202, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 30}}
+{"linea": 11253, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 5.22, "battery_percent": 110}}
+{"linea": 11401, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 11402, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 58}}
+{"linea": 11503, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 4.34, "battery_percent": 110}}
+{"linea": 11601, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 11602, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 86}}
+{"linea": 11753, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 5.87, "battery_percent": 110}}
+{"linea": 11801, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 11802, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 28}}
+{"linea": 12001, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 12002, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 37}}
+{"linea": 12003, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 4.91, "battery_percent": 110}}
+{"linea": 12201, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 12202, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 65}}
+{"linea": 12253, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 4.03, "battery_percent": 110}}
+{"linea": 12401, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 12402, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 93}}
+{"linea": 12503, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 5.56, "battery_percent": 110}}
+{"linea": 12601, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 12602, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 35}}
+{"linea": 12753, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 4.68, "battery_percent": 110}}
+{"linea": 12801, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 12802, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 63}}
+{"linea": 13001, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 13002, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 91}}
+{"linea": 13003, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 3.8, "battery_percent": 110}}
+{"linea": 13201, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 13202, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 33}}
+{"linea": 13253, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 5.33, "battery_percent": 110}}
+{"linea": 13401, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 13402, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 61}}
+{"linea": 13503, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 4.45, "battery_percent": 110}}
+{"linea": 13601, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 13602, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 89}}
+{"linea": 13753, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 5.98, "battery_percent": 110}}
+{"linea": 13801, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 13802, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 31}}
+{"linea": 14001, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 14002, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 40}}
+{"linea": 14003, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 5.02, "battery_percent": 110}}
+{"linea": 14201, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 14202, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 68}}
+{"linea": 14253, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 4.14, "battery_percent": 110}}
+{"linea": 14401, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 14402, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 96}}
+{"linea": 14503, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 5.67, "battery_percent": 110}}
+{"linea": 14601, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 14602, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 38}}
+{"linea": 14753, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 4.79, "battery_percent": 110}}
+{"linea": 14801, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 14802, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 66}}
+{"linea": 15001, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 15002, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 94}}
+{"linea": 15003, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 3.91, "battery_percent": 110}}
+{"linea": 15201, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 15202, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 36}}
+{"linea": 15253, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 5.44, "battery_percent": 110}}
+{"linea": 15401, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 15402, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 64}}
+{"linea": 15503, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 4.56, "battery_percent": 110}}
+{"linea": 15601, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 15602, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 92}}
+{"linea": 15753, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 6.09, "battery_percent": 110}}
+{"linea": 15801, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 15802, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 34}}
+{"linea": 16001, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 16002, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 43}}
+{"linea": 16003, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 5.13, "battery_percent": 110}}
+{"linea": 16201, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 16202, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 71}}
+{"linea": 16253, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 4.25, "battery_percent": 110}}
+{"linea": 16401, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 16402, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 99}}
+{"linea": 16503, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 5.78, "battery_percent": 110}}
+{"linea": 16601, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 16602, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 41}}
+{"linea": 16753, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 4.9, "battery_percent": 110}}
+{"linea": 16801, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 16802, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 69}}
+{"linea": 17001, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 17002, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 97}}
+{"linea": 17003, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 4.02, "battery_percent": 110}}
+{"linea": 17201, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 17202, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 39}}
+{"linea": 17253, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 5.55, "battery_percent": 110}}
+{"linea": 17401, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 17402, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 67}}
+{"linea": 17503, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 4.67, "battery_percent": 110}}
+{"linea": 17601, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 17602, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 95}}
+{"linea": 17753, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 6.2, "battery_percent": 110}}
+{"linea": 17801, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 17802, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 37}}
+{"linea": 18001, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 18002, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 46}}
+{"linea": 18003, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 5.24, "battery_percent": 110}}
+{"linea": 18201, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 18202, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 74}}
+{"linea": 18253, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 4.36, "battery_percent": 110}}
+{"linea": 18401, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 18402, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 16}}
+{"linea": 18503, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 5.89, "battery_percent": 110}}
+{"linea": 18601, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 18602, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 44}}
+{"linea": 18753, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 5.01, "battery_percent": 110}}
+{"linea": 18801, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 18802, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 72}}
+{"linea": 19001, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 19002, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 100}}
+{"linea": 19003, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 4.13, "battery_percent": 110}}
+{"linea": 19201, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 19202, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 42}}
+{"linea": 19253, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 5.66, "battery_percent": 110}}
+{"linea": 19401, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 19402, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 70}}
+{"linea": 19503, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 4.78, "battery_percent": 110}}
+{"linea": 19601, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 19602, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 98}}
+{"linea": 19753, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 3.9, "battery_percent": 110}}
+{"linea": 19801, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 19802, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 40}}
+{"linea": 20001, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 20002, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 49}}
+{"linea": 20003, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 5.35, "battery_percent": 110}}
+{"linea": 20201, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 20202, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 77}}
+{"linea": 20253, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 4.47, "battery_percent": 110}}
+{"linea": 20401, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 20402, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 19}}
+{"linea": 20503, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 6.0, "battery_percent": 110}}
+{"linea": 20601, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 20602, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 47}}
+{"linea": 20753, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 5.12, "battery_percent": 110}}
+{"linea": 20801, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 20802, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 75}}
+{"linea": 21001, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 21002, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 17}}
+{"linea": 21003, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 4.24, "battery_percent": 110}}
+{"linea": 21201, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 21202, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 45}}
+{"linea": 21253, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 5.77, "battery_percent": 110}}
+{"linea": 21401, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 21402, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 73}}
+{"linea": 21503, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 4.89, "battery_percent": 110}}
+{"linea": 21601, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 21602, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 15}}
+{"linea": 21753, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 4.01, "battery_percent": 110}}
+{"linea": 21801, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 21802, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 43}}
+{"linea": 22001, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 22002, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 52}}
+{"linea": 22003, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 5.46, "battery_percent": 110}}
+{"linea": 22201, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 22202, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 80}}
+{"linea": 22253, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 4.58, "battery_percent": 110}}
+{"linea": 22401, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 22402, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 22}}
+{"linea": 22503, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 6.11, "battery_percent": 110}}
+{"linea": 22601, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 22602, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 50}}
+{"linea": 22753, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 5.23, "battery_percent": 110}}
+{"linea": 22801, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 22802, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 78}}
+{"linea": 23001, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 23002, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 20}}
+{"linea": 23003, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 4.35, "battery_percent": 110}}
+{"linea": 23201, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 23202, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 48}}
+{"linea": 23253, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 5.88, "battery_percent": 110}}
+{"linea": 23401, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 23402, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 76}}
+{"linea": 23503, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 5.0, "battery_percent": 110}}
+{"linea": 23601, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 23602, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 18}}
+{"linea": 23753, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 4.12, "battery_percent": 110}}
+{"linea": 23801, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 23802, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 46}}
+{"linea": 24001, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 24002, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 55}}
+{"linea": 24003, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 5.57, "battery_percent": 110}}
+{"linea": 24201, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 24202, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 83}}
+{"linea": 24253, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 4.69, "battery_percent": 110}}
+{"linea": 24401, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 24402, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 25}}
+{"linea": 24503, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 3.81, "battery_percent": 110}}
+{"linea": 24601, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 24602, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 53}}
+{"linea": 24753, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 5.34, "battery_percent": 110}}
+{"linea": 24801, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 24802, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 81}}
+{"linea": 25001, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 25002, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 23}}
+{"linea": 25003, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 4.46, "battery_percent": 110}}
+{"linea": 25201, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 25202, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 51}}
+{"linea": 25253, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 5.99, "battery_percent": 110}}
+{"linea": 25401, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 25402, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 79}}
+{"linea": 25503, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 5.11, "battery_percent": 110}}
+{"linea": 25601, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 25602, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 21}}
+{"linea": 25753, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 4.23, "battery_percent": 110}}
+{"linea": 25801, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 25802, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 49}}
+{"linea": 26001, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 26002, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 58}}
+{"linea": 26003, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 5.68, "battery_percent": 110}}
+{"linea": 26201, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 26202, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 86}}
+{"linea": 26253, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 4.8, "battery_percent": 110}}
+{"linea": 26401, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 26402, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 28}}
+{"linea": 26503, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 3.92, "battery_percent": 110}}
+{"linea": 26601, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 26602, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 56}}
+{"linea": 26753, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 5.45, "battery_percent": 110}}
+{"linea": 26801, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 26802, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 84}}
+{"linea": 27001, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 27002, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 26}}
+{"linea": 27003, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 4.57, "battery_percent": 110}}
+{"linea": 27201, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 27202, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 54}}
+{"linea": 27253, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 6.1, "battery_percent": 110}}
+{"linea": 27401, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 27402, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 82}}
+{"linea": 27503, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 5.22, "battery_percent": 110}}
+{"linea": 27601, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 27602, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 24}}
+{"linea": 27753, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 4.34, "battery_percent": 110}}
+{"linea": 27801, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 27802, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 52}}
+{"linea": 28001, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 28002, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 61}}
+{"linea": 28003, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 5.79, "battery_percent": 110}}
+{"linea": 28201, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 28202, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 89}}
+{"linea": 28253, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 4.91, "battery_percent": 110}}
+{"linea": 28401, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 28402, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 31}}
+{"linea": 28503, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 4.03, "battery_percent": 110}}
+{"linea": 28601, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 28602, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 59}}
+{"linea": 28753, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 5.56, "battery_percent": 110}}
+{"linea": 28801, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 28802, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 87}}
+{"linea": 29001, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 29002, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 29}}
+{"linea": 29003, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 4.68, "battery_percent": 110}}
+{"linea": 29201, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 29202, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 57}}
+{"linea": 29253, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 3.8, "battery_percent": 110}}
+{"linea": 29401, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 29402, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 85}}
+{"linea": 29503, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 5.33, "battery_percent": 110}}
+{"linea": 29601, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 29602, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 27}}
+{"linea": 29753, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 4.45, "battery_percent": 110}}
+{"linea": 29801, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 29802, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 55}}
+{"linea": 30001, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 30002, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 64}}
+{"linea": 30003, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 5.9, "battery_percent": 110}}
+{"linea": 30201, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 30202, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 92}}
+{"linea": 30253, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 5.02, "battery_percent": 110}}
+{"linea": 30401, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 30402, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 34}}
+{"linea": 30503, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 4.14, "battery_percent": 110}}
+{"linea": 30601, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 30602, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 62}}
+{"linea": 30753, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 5.67, "battery_percent": 110}}
+{"linea": 30801, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 30802, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 90}}
+{"linea": 31001, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 31002, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 32}}
+{"linea": 31003, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 4.79, "battery_percent": 110}}
+{"linea": 31201, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 31202, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 60}}
+{"linea": 31253, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 3.91, "battery_percent": 110}}
+{"linea": 31401, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 31402, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 88}}
+{"linea": 31503, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 5.44, "battery_percent": 110}}
+{"linea": 31601, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 31602, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 30}}
+{"linea": 31753, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 4.56, "battery_percent": 110}}
+{"linea": 31801, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 31802, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 58}}
+{"linea": 32001, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 32002, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 67}}
+{"linea": 32003, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 6.01, "battery_percent": 110}}
+{"linea": 32201, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 32202, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 95}}
+{"linea": 32253, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 5.13, "battery_percent": 110}}
+{"linea": 32401, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 32402, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 37}}
+{"linea": 32503, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 4.25, "battery_percent": 110}}
+{"linea": 32601, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 32602, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 65}}
+{"linea": 32753, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 5.78, "battery_percent": 110}}
+{"linea": 32801, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 32802, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 93}}
+{"linea": 33001, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 33002, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 35}}
+{"linea": 33003, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 4.9, "battery_percent": 110}}
+{"linea": 33201, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 33202, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 63}}
+{"linea": 33253, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 4.02, "battery_percent": 110}}
+{"linea": 33401, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 33402, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 91}}
+{"linea": 33503, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 5.55, "battery_percent": 110}}
+{"linea": 33601, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 33602, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 33}}
+{"linea": 33753, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 4.67, "battery_percent": 110}}
+{"linea": 33801, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 33802, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 61}}
+{"linea": 34001, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 34002, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 70}}
+{"linea": 34003, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 6.12, "battery_percent": 110}}
+{"linea": 34201, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 34202, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 98}}
+{"linea": 34253, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 5.24, "battery_percent": 110}}
+{"linea": 34401, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 34402, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 40}}
+{"linea": 34503, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 4.36, "battery_percent": 110}}
+{"linea": 34601, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 34602, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 68}}
+{"linea": 34753, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 5.89, "battery_percent": 110}}
+{"linea": 34801, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 34802, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 96}}
+{"linea": 35001, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 35002, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 38}}
+{"linea": 35003, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 5.01, "battery_percent": 110}}
+{"linea": 35201, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 35202, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 66}}
+{"linea": 35253, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 4.13, "battery_percent": 110}}
+{"linea": 35401, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 35402, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 94}}
+{"linea": 35503, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 5.66, "battery_percent": 110}}
+{"linea": 35601, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 35602, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 36}}
+{"linea": 35753, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 4.78, "battery_percent": 110}}
+{"linea": 35801, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 35802, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 64}}
+{"linea": 36001, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 36002, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 73}}
+{"linea": 36003, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 3.82, "battery_percent": 110}}
+{"linea": 36201, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 36202, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 15}}
+{"linea": 36253, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 5.35, "battery_percent": 110}}
+{"linea": 36401, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 36402, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 43}}
+{"linea": 36503, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 4.47, "battery_percent": 110}}
+{"linea": 36601, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 36602, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 71}}
+{"linea": 36753, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 6.0, "battery_percent": 110}}
+{"linea": 36801, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 36802, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 99}}
+{"linea": 37001, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 37002, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 41}}
+{"linea": 37003, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 5.12, "battery_percent": 110}}
+{"linea": 37201, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 37202, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 69}}
+{"linea": 37253, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 4.24, "battery_percent": 110}}
+{"linea": 37401, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 37402, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 97}}
+{"linea": 37503, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 5.77, "battery_percent": 110}}
+{"linea": 37601, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 37602, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 39}}
+{"linea": 37753, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 4.89, "battery_percent": 110}}
+{"linea": 37801, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 37802, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 67}}
+{"linea": 38001, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 38002, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 76}}
+{"linea": 38003, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 3.93, "battery_percent": 110}}
+{"linea": 38201, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 38202, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 18}}
+{"linea": 38253, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 5.46, "battery_percent": 110}}
+{"linea": 38401, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 38402, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 46}}
+{"linea": 38503, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 4.58, "battery_percent": 110}}
+{"linea": 38601, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 38602, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 74}}
+{"linea": 38753, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 6.11, "battery_percent": 110}}
+{"linea": 38801, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 38802, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 16}}
+{"linea": 39001, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 39002, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 44}}
+{"linea": 39003, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 5.23, "battery_percent": 110}}
+{"linea": 39201, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 39202, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 72}}
+{"linea": 39253, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 4.35, "battery_percent": 110}}
+{"linea": 39401, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 39402, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 100}}
+{"linea": 39503, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 5.88, "battery_percent": 110}}
+{"linea": 39601, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 39602, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 42}}
+{"linea": 39753, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 5.0, "battery_percent": 110}}
+{"linea": 39801, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 39802, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 70}}
+{"linea": 40001, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 40002, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 79}}
+{"linea": 40003, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 4.04, "battery_percent": 110}}
+{"linea": 40201, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 40202, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 21}}
+{"linea": 40253, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 5.57, "battery_percent": 110}}
+{"linea": 40401, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 40402, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 49}}
+{"linea": 40503, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 4.69, "battery_percent": 110}}
+{"linea": 40601, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 40602, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 77}}
+{"linea": 40753, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 3.81, "battery_percent": 110}}
+{"linea": 40801, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 40802, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 19}}
+{"linea": 41001, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 41002, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 47}}
+{"linea": 41003, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 5.34, "battery_percent": 110}}
+{"linea": 41201, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 41202, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 75}}
+{"linea": 41253, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 4.46, "battery_percent": 110}}
+{"linea": 41401, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 41402, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 17}}
+{"linea": 41503, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 5.99, "battery_percent": 110}}
+{"linea": 41601, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 41602, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 45}}
+{"linea": 41753, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 5.11, "battery_percent": 110}}
+{"linea": 41801, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 41802, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 73}}
+{"linea": 42001, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 42002, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 82}}
+{"linea": 42003, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 4.15, "battery_percent": 110}}
+{"linea": 42201, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 42202, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 24}}
+{"linea": 42253, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 5.68, "battery_percent": 110}}
+{"linea": 42401, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 42402, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 52}}
+{"linea": 42503, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 4.8, "battery_percent": 110}}
+{"linea": 42601, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 42602, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 80}}
+{"linea": 42753, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 3.92, "battery_percent": 110}}
+{"linea": 42801, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 42802, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 22}}
+{"linea": 43001, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 43002, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 50}}
+{"linea": 43003, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 5.45, "battery_percent": 110}}
+{"linea": 43201, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 43202, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 78}}
+{"linea": 43253, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 4.57, "battery_percent": 110}}
+{"linea": 43401, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 43402, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 20}}
+{"linea": 43503, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 6.1, "battery_percent": 110}}
+{"linea": 43601, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 43602, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 48}}
+{"linea": 43753, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 5.22, "battery_percent": 110}}
+{"linea": 43801, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 43802, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 76}}
+{"linea": 44001, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 44002, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 85}}
+{"linea": 44003, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 4.26, "battery_percent": 110}}
+{"linea": 44201, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 44202, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 27}}
+{"linea": 44253, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 5.79, "battery_percent": 110}}
+{"linea": 44401, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 44402, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 55}}
+{"linea": 44503, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 4.91, "battery_percent": 110}}
+{"linea": 44601, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 44602, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 83}}
+{"linea": 44753, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 4.03, "battery_percent": 110}}
+{"linea": 44801, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 44802, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 25}}
+{"linea": 45001, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 45002, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 53}}
+{"linea": 45003, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 5.56, "battery_percent": 110}}
+{"linea": 45201, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 45202, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 81}}
+{"linea": 45253, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 4.68, "battery_percent": 110}}
+{"linea": 45401, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 45402, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 23}}
+{"linea": 45503, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 3.8, "battery_percent": 110}}
+{"linea": 45601, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 45602, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 51}}
+{"linea": 45753, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 5.33, "battery_percent": 110}}
+{"linea": 45801, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 45802, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 79}}
+{"linea": 46001, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 46002, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 88}}
+{"linea": 46003, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 4.37, "battery_percent": 110}}
+{"linea": 46201, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 46202, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 30}}
+{"linea": 46253, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 5.9, "battery_percent": 110}}
+{"linea": 46401, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 46402, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 58}}
+{"linea": 46503, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 5.02, "battery_percent": 110}}
+{"linea": 46601, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 46602, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 86}}
+{"linea": 46753, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 4.14, "battery_percent": 110}}
+{"linea": 46801, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 46802, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 28}}
+{"linea": 47001, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 47002, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 56}}
+{"linea": 47003, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 5.67, "battery_percent": 110}}
+{"linea": 47201, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 47202, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 84}}
+{"linea": 47253, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 4.79, "battery_percent": 110}}
+{"linea": 47401, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 47402, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 26}}
+{"linea": 47503, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 3.91, "battery_percent": 110}}
+{"linea": 47601, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 47602, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 54}}
+{"linea": 47753, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 5.44, "battery_percent": 110}}
+{"linea": 47801, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 47802, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 82}}
+{"linea": 48001, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 48002, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 91}}
+{"linea": 48003, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 4.48, "battery_percent": 110}}
+{"linea": 48201, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 48202, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 33}}
+{"linea": 48253, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 6.01, "battery_percent": 110}}
+{"linea": 48401, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 48402, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 61}}
+{"linea": 48503, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 5.13, "battery_percent": 110}}
+{"linea": 48601, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 48602, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 89}}
+{"linea": 48753, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 4.25, "battery_percent": 110}}
+{"linea": 48801, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 48802, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 31}}
+{"linea": 49001, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 49002, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 59}}
+{"linea": 49003, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 5.78, "battery_percent": 110}}
+{"linea": 49201, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 49202, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 87}}
+{"linea": 49253, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 4.9, "battery_percent": 110}}
+{"linea": 49401, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 49402, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 29}}
+{"linea": 49503, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 4.02, "battery_percent": 110}}
+{"linea": 49601, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 49602, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 57}}
+{"linea": 49753, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 5.55, "battery_percent": 110}}
+{"linea": 49801, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 49802, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 85}}
+{"linea": 50001, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 50002, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 94}}
+{"linea": 50003, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 4.59, "battery_percent": 110}}
+{"linea": 50201, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 50202, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 36}}
+{"linea": 50253, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 6.12, "battery_percent": 110}}
+{"linea": 50401, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 50402, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 64}}
+{"linea": 50503, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 5.24, "battery_percent": 110}}
+{"linea": 50601, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 50602, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 92}}
+{"linea": 50753, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 4.36, "battery_percent": 110}}
+{"linea": 50801, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 50802, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 34}}
+{"linea": 51001, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 51002, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 62}}
+{"linea": 51003, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 5.89, "battery_percent": 110}}
+{"linea": 51201, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 51202, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 90}}
+{"linea": 51253, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 5.01, "battery_percent": 110}}
+{"linea": 51401, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 51402, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 32}}
+{"linea": 51503, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 4.13, "battery_percent": 110}}
+{"linea": 51601, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 51602, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 60}}
+{"linea": 51753, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 5.66, "battery_percent": 110}}
+{"linea": 51801, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 51802, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 88}}
+{"linea": 52001, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 52002, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 97}}
+{"linea": 52003, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 4.7, "battery_percent": 110}}
+{"linea": 52201, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 52202, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 39}}
+{"linea": 52253, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 3.82, "battery_percent": 110}}
+{"linea": 52401, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 52402, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 67}}
+{"linea": 52503, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 5.35, "battery_percent": 110}}
+{"linea": 52601, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 52602, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 95}}
+{"linea": 52753, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 4.47, "battery_percent": 110}}
+{"linea": 52801, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 52802, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 37}}
+{"linea": 53001, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 53002, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 65}}
+{"linea": 53003, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 6.0, "battery_percent": 110}}
+{"linea": 53201, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 53202, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 93}}
+{"linea": 53253, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 5.12, "battery_percent": 110}}
+{"linea": 53401, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 53402, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 35}}
+{"linea": 53503, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 4.24, "battery_percent": 110}}
+{"linea": 53601, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 53602, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 63}}
+{"linea": 53753, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 5.77, "battery_percent": 110}}
+{"linea": 53801, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 53802, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 91}}
+{"linea": 54001, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 54002, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 100}}
+{"linea": 54003, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 4.81, "battery_percent": 110}}
+{"linea": 54201, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 54202, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 42}}
+{"linea": 54253, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 3.93, "battery_percent": 110}}
+{"linea": 54401, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 54402, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 70}}
+{"linea": 54503, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 5.46, "battery_percent": 110}}
+{"linea": 54601, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 54602, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 98}}
+{"linea": 54753, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 4.58, "battery_percent": 110}}
+{"linea": 54801, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 54802, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 40}}
+{"linea": 55001, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 55002, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 68}}
+{"linea": 55003, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 6.11, "battery_percent": 110}}
+{"linea": 55201, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 55202, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 96}}
+{"linea": 55253, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 5.23, "battery_percent": 110}}
+{"linea": 55401, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 55402, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 38}}
+{"linea": 55503, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 4.35, "battery_percent": 110}}
+{"linea": 55601, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 55602, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 66}}
+{"linea": 55753, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 5.88, "battery_percent": 110}}
+{"linea": 55801, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 55802, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 94}}
+{"linea": 56001, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 56002, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 17}}
+{"linea": 56003, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 4.92, "battery_percent": 110}}
+{"linea": 56201, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 56202, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 45}}
+{"linea": 56253, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 4.04, "battery_percent": 110}}
+{"linea": 56401, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 56402, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 73}}
+{"linea": 56503, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 5.57, "battery_percent": 110}}
+{"linea": 56601, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 56602, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 15}}
+{"linea": 56753, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 4.69, "battery_percent": 110}}
+{"linea": 56801, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 56802, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 43}}
+{"linea": 57001, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 57002, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 71}}
+{"linea": 57003, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 3.81, "battery_percent": 110}}
+{"linea": 57201, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 57202, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 99}}
+{"linea": 57253, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 5.34, "battery_percent": 110}}
+{"linea": 57401, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 57402, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 41}}
+{"linea": 57503, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 4.46, "battery_percent": 110}}
+{"linea": 57601, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 57602, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 69}}
+{"linea": 57753, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 5.99, "battery_percent": 110}}
+{"linea": 57801, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 57802, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 97}}
+{"linea": 58001, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 58002, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 20}}
+{"linea": 58003, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 5.03, "battery_percent": 110}}
+{"linea": 58201, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 58202, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 48}}
+{"linea": 58253, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 4.15, "battery_percent": 110}}
+{"linea": 58401, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 58402, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 76}}
+{"linea": 58503, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 5.68, "battery_percent": 110}}
+{"linea": 58601, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 58602, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 18}}
+{"linea": 58753, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 4.8, "battery_percent": 110}}
+{"linea": 58801, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 58802, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 46}}
+{"linea": 59001, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 59002, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 74}}
+{"linea": 59003, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 3.92, "battery_percent": 110}}
+{"linea": 59201, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 59202, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 16}}
+{"linea": 59253, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 5.45, "battery_percent": 110}}
+{"linea": 59401, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 59402, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 44}}
+{"linea": 59503, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-03", "temperature_c": 4.57, "battery_percent": 110}}
+{"linea": 59601, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 59602, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 72}}
+{"linea": 59753, "tipo": "negocio", "motivo": ["Bateria superior a 100%"], "evento": {"sensor_id": "SENSOR-13", "temperature_c": 6.1, "battery_percent": 110}}
+{"linea": 59801, "tipo": "negocio", "motivo": ["Temperatura superior a 8.0 grados"], "evento": {"sensor_id": "SENSOR-01", "temperature_c": 9.5, "battery_percent": null}}
+{"linea": 59802, "tipo": "negocio", "motivo": ["Temperatura inferior a 2.0 grados"], "evento": {"sensor_id": "SENSOR-02", "temperature_c": 0.5, "battery_percent": 100}}
