@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Examen NBA 2K25 · Scouting con R</title>
+<meta name="description" content="Examen práctico de introducción a R (2 horas) sobre el dataset de jugadores de NBA 2K25: importación, factores, filtros, NA, matrices, listas y gráficas.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script>document.documentElement.classList.add('intro-on')</script>
+</head>
+<body data-mode="a" data-minutes="120">
+<div class="intro" id="intro" aria-label="Vídeo de introducción">
+  <video id="introVideo" src="video/jugador_baloncesto.mp4" playsinline preload="auto"></video>
+  <button class="intro-play" id="introPlay" type="button">▶ Empezar</button>
+  <div class="intro-ctrl"><button class="btn" id="introSound" type="button">🔇 Activar sonido</button><button class="btn" id="introSkip" type="button">Saltar intro ⏭</button></div>
+</div>
+<div class="scroll-progress" aria-hidden="true"><i id="scrollBar"></i></div>
+<canvas id="fx" aria-hidden="true"></canvas>
+
+<header class="hero">
+  <div class="hero-copy">
+    <span class="eyebrow"><i class="live"></i>Examen · Introducción a R · 2 horas</span>
+    <h1><span class="stroke">Scouting</span><br><span class="grad">NBA 2K25</span></h1>
+    <p class="lead">Una franquicia te ficha como <strong>analista de datos</strong>. Tienes la base de jugadores de NBA 2K25 y cuatro cuartos para convertirla en un informe que la dirección deportiva pueda usar: limpiar, filtrar, resumir, visualizar y concluir.</p>
+    <div class="chips"><span class="chip">⏱ 120 min</span><span class="chip">📊 R base</span><span class="chip">🏀 14 ejercicios · 4 cuartos</span><span class="chip gold">🏅 10 puntos</span></div>
+    <a class="cta" href="#mision">Saltar a la pista ↓</a>
+  </div>
+  <div class="arena" title="Haz clic para lanzar">
+    <canvas id="court" aria-label="Animación de un tiro a canasta"></canvas>
+    <div class="board"><span>LOCAL</span><span>PTS <b id="arenaPts">000</b></span></div>
+    <span class="tap">CLIC PARA LANZAR</span>
+  </div>
+</header>
+
+<div class="hud">
+  <div class="hud-row">
+    <div style="display:flex;gap:8px;align-items:center"><span class="timer" id="timer">02:00:00</span><button class="btn" id="timerBtn" type="button">▶ Iniciar</button><button class="btn" id="timerReset" type="button" title="Reiniciar cronómetro">↺</button></div>
+    <div class="medals" id="medals" aria-label="Ejercicios superados"></div>
+    <span class="hits" id="hits"></span>
+    <div class="score">NOTA <b id="score">0.0</b> / 10</div>
+  <nav class="quick"><a href="#mision">🎯 Misión</a><a href="#normas">📜 Normas</a><a href="#dataset">🗂 Dataset</a><a href="#consejos">📋 Pizarra</a><a href="#q1">Q1</a><a href="#q2">Q2</a><a href="#q3">Q3</a><a href="#q4">Q4</a><a href="#rubrica">🧮 Entrega</a></nav>
+  </div>
+</div>
+
+<main>
+  <section class="panel reveal" id="mision">
+    <div class="panel-head"><h2>🎯 La misión · Informe de scouting</h2><span class="tag or">Vectores · factores · data frames · matrices · listas · gráficas</span></div>
+    <div class="grid2">
+      <div>
+        <p>Trabajarás con <code>current_nba_players.csv</code>, un extracto de NBA 2K25 con <strong>457 jugadores</strong> y más de 100 columnas: datos físicos, procedencia, equipo y las valoraciones del juego.</p>
+        <p>El examen se divide en <strong>cuatro cuartos</strong>, como un partido. Lo resolverás en un <strong>cuaderno de Google Colab</strong>. Cada ejercicio indica qué hay que conseguir, no cómo hacerlo. Marca los criterios a medida que los cumplas y, cuando estén todos, lanza el tiro para que sume a tu nota. El <strong>marcador de resultados</strong> de cada ejercicio te dice si el valor que te ha dado R es correcto.</p>
+        <p class="note">Tienes <strong>120 minutos</strong>. Los tiempos de cada ejercicio son orientativos y puedes hacerlos en cualquier orden, aunque los del 4º cuarto usan columnas creadas antes. Si te atascas, sigue con el siguiente y vuelve después.</p>
+        <div class="tscroll" style="margin-top:14px"><table><thead><tr><th>Ejercicio</th><th>Nivel</th><th>Tiempo</th><th>Peso</th></tr></thead><tbody><tr class="q"><td colspan="4">1ER CUARTO · PREPARACIÓN DEL DATASET · 20 min</td></tr><tr><td><strong>E01</strong> · Importación y limpieza</td><td>Fácil</td><td>6 min</td><td><strong>0.4</strong></td></tr><tr><td><strong>E02</strong> · Ficha técnica con str()</td><td>Fácil</td><td>7 min</td><td><strong>0.6</strong></td></tr><tr><td><strong>E03</strong> · Resúmenes y factores</td><td>Fácil</td><td>7 min</td><td><strong>0.5</strong></td></tr><tr class="q"><td colspan="4">2º CUARTO · FILTROS Y CONSULTAS · 40 min</td></tr><tr><td><strong>E04</strong> · Pívots en el radar</td><td>Media</td><td>8 min</td><td><strong>0.6</strong></td></tr><tr><td><strong>E05</strong> · Jugadores entre 185 y 195 cm</td><td>Fácil</td><td>6 min</td><td><strong>0.4</strong></td></tr><tr><td><strong>E06</strong> · Récords físicos y valores NA</td><td>Media</td><td>9 min</td><td><strong>0.7</strong></td></tr><tr><td><strong>E07</strong> · Los veteranos de la liga</td><td>Fácil</td><td>8 min</td><td><strong>0.5</strong></td></tr><tr><td><strong>E08</strong> · Lista corta internacional</td><td>Media</td><td>9 min</td><td><strong>0.8</strong></td></tr><tr class="q"><td colspan="4">3ER CUARTO · ESTRUCTURAS DE DATOS · 28 min</td></tr><tr><td><strong>E09</strong> · Nuevas variables: IMC y experiencia</td><td>Media</td><td>9 min</td><td><strong>0.7</strong></td></tr><tr><td><strong>E10</strong> · Matriz de scouting</td><td>Difícil</td><td>11 min</td><td><strong>0.9</strong></td></tr><tr><td><strong>E11</strong> · Lista: el informe de franquicia</td><td>Media</td><td>8 min</td><td><strong>0.6</strong></td></tr><tr class="q"><td colspan="4">4º CUARTO · VISUALIZACIÓN Y CONCLUSIONES · 32 min</td></tr><tr><td><strong>E12</strong> · Distribuciones: histogramas y box plots</td><td>Media</td><td>10 min</td><td><strong>1.0</strong></td></tr><tr><td><strong>E13</strong> · Comparar categorías: barras y quesitos</td><td>Media</td><td>10 min</td><td><strong>1.0</strong></td></tr><tr><td><strong>E14</strong> · Relaciones: dispersión y correlación</td><td>Difícil</td><td>12 min</td><td><strong>1.3</strong></td></tr></tbody></table></div>
+      </div>
+      <div class="shot-wrap">
+        <h4 style="text-align:center">🏀 SHOT CHART DE PROGRESO</h4>
+        <canvas id="shotchart" aria-label="Mapa de tiro con el progreso de cada ejercicio"></canvas>
+        <span class="muted">Cada posición es un ejercicio: el aro naranja crece con los criterios y el balón aparece al completarlo. Haz clic en una posición para ir al ejercicio.</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel reveal" id="normas">
+    <div class="panel-head"><h2>📜 Normas del partido</h2><span class="tag gold">Léelas antes de abrir R</span></div>
+    <div class="rules">
+      <div class="rule"><span class="ico">🧠</span><div><strong>Juega tú</strong>Puedes usar tus apuntes y la ayuda de R (<code>?funcion</code>). Sin IA y sin copiar de compañeros.</div></div>
+      <div class="rule"><span class="ico">📓</span><div><strong>Cuaderno de Google Colab</strong>Trabaja en un cuaderno de Colab que empiece con las celdas de configuración de los apuntes (instalar <code>rpy2</code> y <code>%load_ext rpy2.ipython</code>). Cada celda de código de R empieza por <code>%%R</code>.</div></div>
+      <div class="rule"><span class="ico">📝</span><div><strong>Texto antes del código</strong>Antes de cada bloque de código va una celda de texto (Markdown) con el código y el título del ejercicio (<code>### E01 · …</code>) y su enunciado.</div></div>
+      <div class="rule"><span class="ico">💬</span><div><strong>Responde por escrito</strong>Las preguntas de «¿por qué?» o «¿qué conclusión…?» se contestan con comentarios en la celda de código o en una celda de texto justo debajo.</div></div>
+      <div class="rule"><span class="ico">▶️</span><div><strong>El cuaderno debe ejecutarse</strong>Con <em>Entorno de ejecución → Ejecutar todas</em> y sin errores. Una celda que rompe la ejecución resta el 50 % del ejercicio afectado.</div></div>
+      <div class="rule"><span class="ico">🧹</span><div><strong>Nombres con sentido</strong>Usa los nombres de objeto sugeridos cuando los haya y nombres descriptivos en el resto.</div></div>
+      <div class="rule"><span class="ico">📈</span><div><strong>Gráficas legibles</strong>Toda gráfica lleva título y ejes con nombre. Sin conclusión escrita, la gráfica puntúa la mitad.</div></div>
+    </div>
+  </section>
+
+  <section class="panel reveal" id="dataset">
+    <div class="panel-head"><h2>🗂 El dataset · Ficha del vestuario</h2><span class="tag">current_nba_players.csv · NBA 2K25</span></div>
+    <div class="grid2">
+      <div>
+        <p>Algunas de las columnas que vas a necesitar:</p>
+        <ul class="cols">
+          <li><code>name</code> nombre completo</li><li><code>nationality_1</code>, <code>nationality_2</code> nacionalidades</li>
+          <li><code>team</code> equipo NBA actual</li><li><code>jersey</code> dorsal</li>
+          <li><code>position_1</code>, <code>position_2</code> posiciones</li><li><code>archetype</code> tipo de jugador en el juego</li>
+          <li><code>height_cm</code> altura en cm</li><li><code>weight_kg</code> peso en kg</li>
+          <li><code>season_salary</code> salario de la temporada</li><li><code>years_in_the_nba</code> años de experiencia</li>
+          <li><code>birthdate</code> fecha de nacimiento</li><li><code>prior_to_nba</code> procedencia previa</li>
+          <li><code>overall</code> media global</li><li><code>speed</code>, <code>strength</code> atributos físicos</li>
+          <li><code>three_point_shot</code> tiro de tres</li><li><code>badge_*</code> insignias del juego</li>
+        </ul>
+      </div>
+      <div class="rconsole"><div class="bar"><i></i><i></i><i></i>R Console · vista previa</div><pre id="rcon" data-lines="[{&quot;cmd&quot;: &quot;head(jugadores[, c(\&quot;name\&quot;, \&quot;team\&quot;, \&quot;position_1\&quot;, \&quot;height_cm\&quot;, \&quot;overall\&quot;)], 5)&quot;}, {&quot;out&quot;: &quot;           name                  team position_1 height_cm overall&quot;}, {&quot;out&quot;: &quot;1  Aaron Gordon        Denver Nuggets         PF       203      82&quot;}, {&quot;out&quot;: &quot;2 Aaron Holiday       Houston Rockets         PG       183      75&quot;}, {&quot;out&quot;: &quot;3 Aaron Nesmith        Indiana Pacers         SF       196      81&quot;}, {&quot;out&quot;: &quot;4 Aaron Wiggins Oklahoma City Thunder         PF       196      79&quot;}, {&quot;out&quot;: &quot;5    Ace Bailey             Utah Jazz         SF       206      77&quot;}]"></pre></div>
+    </div>
+    <div class="players"><div class="pcard" style="--c1:#0e2240"><span class="pos">C</span><div class="ph"><img loading="lazy" src="https://cdn.nba.com/headshots/nba/latest/1040x760/203999.png" alt="Nikola Jokic"></div><div class="nm">Nikola Jokic<small>Denver Nuggets</small></div></div><div class="pcard" style="--c1:#007ac1"><span class="pos">PG</span><div class="ph"><img loading="lazy" src="https://cdn.nba.com/headshots/nba/latest/1040x760/1628983.png" alt="Shai Gilgeous-Alexander"></div><div class="nm">Shai Gilgeous-Alexander<small>Oklahoma City Thunder</small></div></div><div class="pcard" style="--c1:#00471b"><span class="pos">PF</span><div class="ph"><img loading="lazy" src="https://cdn.nba.com/headshots/nba/latest/1040x760/203507.png" alt="Giannis Antetokounmpo"></div><div class="nm">Giannis Antetokounmpo<small>Milwaukee Bucks</small></div></div><div class="pcard" style="--c1:#0c2340"><span class="pos">SG</span><div class="ph"><img loading="lazy" src="https://cdn.nba.com/headshots/nba/latest/1040x760/1630162.png" alt="Anthony Edwards"></div><div class="nm">Anthony Edwards<small>Minnesota Timberwolves</small></div></div><div class="pcard" style="--c1:#552583"><span class="pos">PG</span><div class="ph"><img loading="lazy" src="https://cdn.nba.com/headshots/nba/latest/1040x760/1629029.png" alt="Luka Doncic"></div><div class="nm">Luka Doncic<small>Los Angeles Lakers</small></div></div><div class="pcard" style="--c1:#552583"><span class="pos">PF</span><div class="ph"><img loading="lazy" src="https://cdn.nba.com/headshots/nba/latest/1040x760/2544.png" alt="LeBron James"></div><div class="nm">LeBron James<small>Los Angeles Lakers</small></div></div><div class="pcard" style="--c1:#5a5f63"><span class="pos">C</span><div class="ph"><img loading="lazy" src="https://cdn.nba.com/headshots/nba/latest/1040x760/1641705.png" alt="Victor Wembanyama"></div><div class="nm">Victor Wembanyama<small>San Antonio Spurs</small></div></div><div class="pcard" style="--c1:#1d428a"><span class="pos">PG</span><div class="ph"><img loading="lazy" src="https://cdn.nba.com/headshots/nba/latest/1040x760/201939.png" alt="Stephen Curry"></div><div class="nm">Stephen Curry<small>Golden State Warriors</small></div></div></div>
+    <div class="logos" aria-hidden="true"><div class="track"><img loading="lazy" src="https://cdn.nba.com/logos/nba/1610612737/global/L/logo.svg" alt=""><img loading="lazy" src="https://cdn.nba.com/logos/nba/1610612738/global/L/logo.svg" alt=""><img loading="lazy" src="https://cdn.nba.com/logos/nba/1610612739/global/L/logo.svg" alt=""><img loading="lazy" src="https://cdn.nba.com/logos/nba/1610612740/global/L/logo.svg" alt=""><img loading="lazy" src="https://cdn.nba.com/logos/nba/1610612741/global/L/logo.svg" alt=""><img loading="lazy" src="https://cdn.nba.com/logos/nba/1610612742/global/L/logo.svg" alt=""><img loading="lazy" src="https://cdn.nba.com/logos/nba/1610612743/global/L/logo.svg" alt=""><img loading="lazy" src="https://cdn.nba.com/logos/nba/1610612744/global/L/logo.svg" alt=""><img loading="lazy" src="https://cdn.nba.com/logos/nba/1610612745/global/L/logo.svg" alt=""><img loading="lazy" src="https://cdn.nba.com/logos/nba/1610612746/global/L/logo.svg" alt=""><img loading="lazy" src="https://cdn.nba.com/logos/nba/1610612747/global/L/logo.svg" alt=""><img loading="lazy" src="https://cdn.nba.com/logos/nba/1610612748/global/L/logo.svg" alt=""><img loading="lazy" src="https://cdn.nba.com/logos/nba/1610612749/global/L/logo.svg" alt=""><img loading="lazy" src="https://cdn.nba.com/logos/nba/1610612750/global/L/logo.svg" alt=""><img loading="lazy" src="https://cdn.nba.com/logos/nba/1610612751/global/L/logo.svg" alt=""><img loading="lazy" src="https://cdn.nba.com/logos/nba/1610612752/global/L/logo.svg" alt=""><img loading="lazy" src="https://cdn.nba.com/logos/nba/1610612753/global/L/logo.svg" alt=""><img loading="lazy" src="https://cdn.nba.com/logos/nba/1610612754/global/L/logo.svg" alt=""><img loading="lazy" src="https://cdn.nba.com/logos/nba/1610612755/global/L/logo.svg" alt=""><img loading="lazy" src="https://cdn.nba.com/logos/nba/1610612756/global/L/logo.svg" alt=""><img loading="lazy" src="https://cdn.nba.com/logos/nba/1610612757/global/L/logo.svg" alt=""><img loading="lazy" src="https://cdn.nba.com/logos/nba/1610612758/global/L/logo.svg" alt=""><img loading="lazy" src="https://cdn.nba.com/logos/nba/1610612759/global/L/logo.svg" alt=""><img loading="lazy" src="https://cdn.nba.com/logos/nba/1610612760/global/L/logo.svg" alt=""><img loading="lazy" src="https://cdn.nba.com/logos/nba/1610612761/global/L/logo.svg" alt=""><img loading="lazy" src="https://cdn.nba.com/logos/nba/1610612762/global/L/logo.svg" alt=""><img loading="lazy" src="https://cdn.nba.com/logos/nba/1610612763/global/L/logo.svg" alt=""><img loading="lazy" src="https://cdn.nba.com/logos/nba/1610612764/global/L/logo.svg" alt=""><img loading="lazy" src="https://cdn.nba.com/logos/nba/1610612765/global/L/logo.svg" alt=""><img loading="lazy" src="https://cdn.nba.com/logos/nba/1610612766/global/L/logo.svg" alt=""><img loading="lazy" src="https://cdn.nba.com/logos/nba/1610612737/global/L/logo.svg" alt=""><img loading="lazy" src="https://cdn.nba.com/logos/nba/1610612738/global/L/logo.svg" alt=""><img loading="lazy" src="https://cdn.nba.com/logos/nba/1610612739/global/L/logo.svg" alt=""><img loading="lazy" src="https://cdn.nba.com/logos/nba/1610612740/global/L/logo.svg" alt=""><img loading="lazy" src="https://cdn.nba.com/logos/nba/1610612741/global/L/logo.svg" alt=""><img loading="lazy" src="https://cdn.nba.com/logos/nba/1610612742/global/L/logo.svg" alt=""><img loading="lazy" src="https://cdn.nba.com/logos/nba/1610612743/global/L/logo.svg" alt=""><img loading="lazy" src="https://cdn.nba.com/logos/nba/1610612744/global/L/logo.svg" alt=""><img loading="lazy" src="https://cdn.nba.com/logos/nba/1610612745/global/L/logo.svg" alt=""><img loading="lazy" src="https://cdn.nba.com/logos/nba/1610612746/global/L/logo.svg" alt=""><img loading="lazy" src="https://cdn.nba.com/logos/nba/1610612747/global/L/logo.svg" alt=""><img loading="lazy" src="https://cdn.nba.com/logos/nba/1610612748/global/L/logo.svg" alt=""><img loading="lazy" src="https://cdn.nba.com/logos/nba/1610612749/global/L/logo.svg" alt=""><img loading="lazy" src="https://cdn.nba.com/logos/nba/1610612750/global/L/logo.svg" alt=""><img loading="lazy" src="https://cdn.nba.com/logos/nba/1610612751/global/L/logo.svg" alt=""><img loading="lazy" src="https://cdn.nba.com/logos/nba/1610612752/global/L/logo.svg" alt=""><img loading="lazy" src="https://cdn.nba.com/logos/nba/1610612753/global/L/logo.svg" alt=""><img loading="lazy" src="https://cdn.nba.com/logos/nba/1610612754/global/L/logo.svg" alt=""><img loading="lazy" src="https://cdn.nba.com/logos/nba/1610612755/global/L/logo.svg" alt=""><img loading="lazy" src="https://cdn.nba.com/logos/nba/1610612756/global/L/logo.svg" alt=""><img loading="lazy" src="https://cdn.nba.com/logos/nba/1610612757/global/L/logo.svg" alt=""><img loading="lazy" src="https://cdn.nba.com/logos/nba/1610612758/global/L/logo.svg" alt=""><img loading="lazy" src="https://cdn.nba.com/logos/nba/1610612759/global/L/logo.svg" alt=""><img loading="lazy" src="https://cdn.nba.com/logos/nba/1610612760/global/L/logo.svg" alt=""><img loading="lazy" src="https://cdn.nba.com/logos/nba/1610612761/global/L/logo.svg" alt=""><img loading="lazy" src="https://cdn.nba.com/logos/nba/1610612762/global/L/logo.svg" alt=""><img loading="lazy" src="https://cdn.nba.com/logos/nba/1610612763/global/L/logo.svg" alt=""><img loading="lazy" src="https://cdn.nba.com/logos/nba/1610612764/global/L/logo.svg" alt=""><img loading="lazy" src="https://cdn.nba.com/logos/nba/1610612765/global/L/logo.svg" alt=""><img loading="lazy" src="https://cdn.nba.com/logos/nba/1610612766/global/L/logo.svg" alt=""></div></div>
+  </section>
+
+  <section class="panel reveal" id="consejos">
+    <div class="panel-head"><h2>📋 Pizarra del entrenador · Consideraciones</h2><span class="tag or">Te ahorrarán más de un error</span></div>
+    <div class="tips">
+      <div class="tip"><strong>which(): opcional</strong>No es necesario para el examen, pero aligera cálculos. Devuelve las <em>posiciones</em> donde se cumple una condición; <code>which.max()</code> y <code>which.min()</code> devuelven la posición del máximo y del mínimo.<pre class="mini">notas   &lt;- c(4, 8, 3, 9, 6)
+alumnos &lt;- c("Ana", "Luis", "Eva", "Iker", "Sara")
+which(notas &gt;= 5)          # 2 4 5
+which.max(notas)           # 4
+alumnos[which.max(notas)]  # "Iker"</pre></div>
+      <div class="tip"><strong>Ordenar con sort()</strong><code>sort()</code> ordena un vector; con <code>decreasing = TRUE</code>, de mayor a menor. También sirve para ordenar un recuento hecho con <code>table()</code>.<pre class="mini">tallas &lt;- factor(c("M", "S", "XL", "M", "S", "M"))
+sort(c(7, 2, 9), decreasing = TRUE)        # 9 7 2
+sort(table(tallas), decreasing = TRUE)[1:2] # M 3 · S 2</pre></div>
+      <div class="tip"><strong>Tramos con cut()</strong>Convierte números en un factor por intervalos. Los tramos son <code>(a, b]</code>: abiertos por la izquierda y cerrados por la derecha.<pre class="mini">edades &lt;- c(15, 22, 37, 70)
+cut(edades, breaks = c(0, 17, 64, 120),
+    labels = c("Menor", "Adulto", "Senior"),
+    ordered_result = TRUE)
+# Menor Adulto Adulto Senior · Levels: Menor &lt; Adulto &lt; Senior</pre></div>
+      <div class="tip"><strong>Agregar por grupos con tapply()</strong>Aplica una función (media, mediana, suma…) a un vector separado por los grupos de otro.<pre class="mini">notas &lt;- c(4, 8, 3, 9, 6)
+grupo &lt;- c("A", "B", "A", "B", "A")
+tapply(notas, grupo, mean)   # A 4.33 · B 8.5</pre></div>
+      <div class="tip"><strong>¿No es numérica?</strong>Si una gráfica o una correlación falla porque la variable no es numérica, <code>as.numeric(columna)</code> hace la transformación para que R pueda calcular.</div>
+      <div class="tip"><strong>Quitar filas con NA</strong>Si un gráfico falla por los valores nulos, <code>na.omit(dataset)</code> elimina las filas incompletas de un data frame.</div>
+    </div>
+    <div class="charts">
+      <div class="chart"><b>HISTOGRAMA</b>Distribución de una variable numérica continua.</div>
+      <div class="chart"><b>BOX PLOT</b>Distribución de una variable numérica por grupos: mediana y cuartiles. Por grupos: <code>boxplot(variable ~ grupo, data = df)</code>.</div>
+      <div class="chart"><b>BARRAS</b>Comparar frecuencias o valores agregados (sumas, medias…) de categorías.</div>
+      <div class="chart"><b>PIE CHART</b>Proporciones entre categorías.</div>
+      <div class="chart"><b>PLOT</b>Relación entre dos variables numéricas, junto a <code>cor(x, y, use = "complete.obs")</code>, que devuelve un valor entre -1 y 1.</div>
+    </div>
+  </section>
+
+  <section id="ejercicios"><div class="quarter reveal" id="q1"><span class="qn">Q1</span><div><h2>1er cuarto · Preparación del dataset</h2><p>Importar, limpiar y entender lo que tienes delante. · 20 min</p></div><span class="line"></span></div>
+<article class="ex reveal" id="ex1" data-code="E01" data-title="Importación y limpieza" data-pts="0.4">
+  <div class="ex-head">
+    <div class="ex-num">1</div>
+    <div class="ex-title"><small>EJERCICIO 1 · E01</small><h3>Importación y limpieza</h3></div>
+    <div class="badges"><span class="tag lvl-F">Fácil</span><span class="tag">⏱ ~6 min</span><span class="tag gold">0.4 pts</span></div>
+  </div>
+  <div class="ex-body">
+    <div>
+      <h4>🎯 ENUNCIADO</h4><p>Importa <code>current_nba_players.csv</code> en un data frame llamado <code>jugadores</code>, de forma que las columnas de texto se carguen como <strong>factores</strong> (los necesitarás para contar categorías). El fichero arrastra una columna índice sin nombre que R bautiza como <code>X</code>: <strong>elimínala</strong>. Por último, muestra <strong>solo la dimensión</strong> del data frame (sin imprimir su contenido).</p><p class="out">📦 Objeto esperado: <code>jugadores</code> (data.frame)</p>
+      <details class="hint"><summary>💡 Pista del entrenador</summary><p>Revisa los argumentos de <code>read.csv()</code>: uno de ellos decide qué hacer con las cadenas de texto. Para borrar una columna de un data frame no necesitas ninguna función especial.</p></details>
+      <div class="checks"><h4>📟 MARCADOR DE RESULTADOS</h4><label class="ans" data-k="E01-a0" data-h="a9cf7e32" data-dp="0"><span>Número de jugadores (filas)</span><input type="text" inputmode="decimal" autocomplete="off" spellcheck="false" placeholder="número"><b class="st"></b></label><label class="ans" data-k="E01-a1" data-h="ccb9c579" data-dp="0"><span>Número de columnas tras eliminar X</span><input type="text" inputmode="decimal" autocomplete="off" spellcheck="false" placeholder="número"><b class="st"></b></label><p class="muted" style="margin:6px 0 0;font-size:.76rem">Escribe el valor que te devuelve R y pulsa Enter. Usa punto o coma para los decimales.</p></div>
+    </div>
+    <div>
+      <h4>✅ CRITERIOS DE EVALUACIÓN</h4>
+      <ul class="reqs"><li><label><input type="checkbox" data-k="E01-0"><span>Se importa con <code>read.csv()</code> (o <em>Import Dataset</em>) y las cadenas quedan como factores</span><span class="pt">4 pt</span></label></li><li><label><input type="checkbox" data-k="E01-1"><span>La columna <code>X</code> ya no está en el data frame</span><span class="pt">3 pt</span></label></li><li><label><input type="checkbox" data-k="E01-2"><span>Se muestra únicamente la dimensión del data frame</span><span class="pt">2 pt</span></label></li><li><label><input type="checkbox" data-k="E01-3"><span>El cuaderno empieza con una celda de texto de cabecera (nombre, fecha, objetivo)</span><span class="pt">1 pt</span></label></li></ul>
+      <div class="prog"><i></i></div>
+      <button class="claim" type="button" disabled>🔒</button>
+    </div>
+  </div>
+</article>
+<article class="ex reveal" id="ex2" data-code="E02" data-title="Ficha técnica con str()" data-pts="0.6">
+  <div class="ex-head">
+    <div class="ex-num">2</div>
+    <div class="ex-title"><small>EJERCICIO 2 · E02</small><h3>Ficha técnica con str()</h3></div>
+    <div class="badges"><span class="tag lvl-F">Fácil</span><span class="tag">⏱ ~7 min</span><span class="tag gold">0.6 pts</span></div>
+  </div>
+  <div class="ex-body">
+    <div>
+      <h4>🎯 ENUNCIADO</h4><p>Lanza <code>str()</code> sobre el data frame y explica en un comentario <strong>qué información muestra</strong>. Después averigua el tipo de las columnas <code>overall</code>, <code>team</code>, <code>birthdate</code> y <code>season_salary</code>.</p><p>Una de ellas tiene un tipo sorprendente: indica en un comentario <strong>cuántos datos tiene esa columna y cuántos de ellos son NA</strong>, y explica por qué crees que R le ha asignado ese tipo. ¿Te parece correcto el tipo con el que se ha cargado <code>birthdate</code>?</p><p class="out">📦 Respuestas en comentarios dentro de la celda de código</p>
+      <details class="hint"><summary>💡 Pista del entrenador</summary><p>Hay una función que te dice, valor a valor, si algo es <code>NA</code>. Lo que devuelve se puede sumar. Y piensa: si todos los valores de una columna son <code>NA</code>, ¿de qué tipo será esa variable?</p></details>
+      <div class="checks"><h4>📟 MARCADOR DE RESULTADOS</h4><label class="ans" data-k="E02-a0" data-h="a9cf7e32" data-dp="0"><span>Número de datos de season_salary</span><input type="text" inputmode="decimal" autocomplete="off" spellcheck="false" placeholder="número"><b class="st"></b></label><label class="ans" data-k="E02-a1" data-h="a9cf7e32" data-dp="0"><span>Valores NA en season_salary</span><input type="text" inputmode="decimal" autocomplete="off" spellcheck="false" placeholder="número"><b class="st"></b></label><label class="ans" data-k="E02-a2" data-h="5531ab61"><span>Tipo (class) de season_salary</span><input type="text" inputmode="text" autocomplete="off" spellcheck="false" placeholder="texto"><b class="st"></b></label><p class="muted" style="margin:6px 0 0;font-size:.76rem">Escribe el valor que te devuelve R y pulsa Enter. Usa punto o coma para los decimales.</p></div>
+    </div>
+    <div>
+      <h4>✅ CRITERIOS DE EVALUACIÓN</h4>
+      <ul class="reqs"><li><label><input type="checkbox" data-k="E02-0"><span>Se ejecuta <code>str()</code> y se explica (nº de observaciones, variables, tipo y primeros valores)</span><span class="pt">2 pt</span></label></li><li><label><input type="checkbox" data-k="E02-1"><span>Se obtiene el tipo de las cuatro columnas</span><span class="pt">2 pt</span></label></li><li><label><input type="checkbox" data-k="E02-2"><span>Se detecta que <code>season_salary</code> es <code>logical</code> y se justifica</span><span class="pt">2 pt</span></label></li><li><label><input type="checkbox" data-k="E02-3"><span>Comentario con el número de datos de la columna y el número de NA</span><span class="pt">2 pt</span></label></li><li><label><input type="checkbox" data-k="E02-4"><span>Se razona que <code>birthdate</code> debería ser una fecha y no un factor</span><span class="pt">2 pt</span></label></li></ul>
+      <div class="prog"><i></i></div>
+      <button class="claim" type="button" disabled>🔒</button>
+    </div>
+  </div>
+</article>
+<article class="ex reveal" id="ex3" data-code="E03" data-title="Resúmenes y factores" data-pts="0.5">
+  <div class="ex-head">
+    <div class="ex-num">3</div>
+    <div class="ex-title"><small>EJERCICIO 3 · E03</small><h3>Resúmenes y factores</h3></div>
+    <div class="badges"><span class="tag lvl-F">Fácil</span><span class="tag">⏱ ~7 min</span><span class="tag gold">0.5 pts</span></div>
+  </div>
+  <div class="ex-body">
+    <div>
+      <h4>🎯 ENUNCIADO</h4><p>Aplica <code>summary()</code> sobre una columna numérica (<code>overall</code>) y sobre una de factor (<code>position_1</code>) y explica en qué se diferencia la salida.</p><p>¿Cuántos <strong>equipos</strong> y cuántas <strong>nacionalidades principales</strong> distintas hay en el dataset? Por último, cuenta cuántos bases (<code>PG</code>) hay usando <strong>dos formas distintas</strong>.</p>
+      <details class="hint"><summary>💡 Pista del entrenador</summary><p>Los factores guardan sus categorías. En los apuntes de vectores y factores aparece más de una manera de contar los elementos de un nivel.</p></details>
+      <div class="checks"><h4>📟 MARCADOR DE RESULTADOS</h4><label class="ans" data-k="E03-a0" data-h="a3a62465" data-dp="0"><span>Equipos distintos</span><input type="text" inputmode="decimal" autocomplete="off" spellcheck="false" placeholder="número"><b class="st"></b></label><label class="ans" data-k="E03-a1" data-h="2b9eabb8" data-dp="0"><span>Nacionalidades principales distintas</span><input type="text" inputmode="decimal" autocomplete="off" spellcheck="false" placeholder="número"><b class="st"></b></label><label class="ans" data-k="E03-a2" data-h="9c94d03f" data-dp="0"><span>Número de bases (PG)</span><input type="text" inputmode="decimal" autocomplete="off" spellcheck="false" placeholder="número"><b class="st"></b></label><p class="muted" style="margin:6px 0 0;font-size:.76rem">Escribe el valor que te devuelve R y pulsa Enter. Usa punto o coma para los decimales.</p></div>
+    </div>
+    <div>
+      <h4>✅ CRITERIOS DE EVALUACIÓN</h4>
+      <ul class="reqs"><li><label><input type="checkbox" data-k="E03-0"><span><code>summary()</code> numérico interpretado (mínimo, cuartiles, media, máximo)</span><span class="pt">3 pt</span></label></li><li><label><input type="checkbox" data-k="E03-1"><span><code>summary()</code> de factor interpretado (frecuencia de cada nivel)</span><span class="pt">2 pt</span></label></li><li><label><input type="checkbox" data-k="E03-2"><span>Número de niveles de <code>team</code> y de <code>nationality_1</code></span><span class="pt">2 pt</span></label></li><li><label><input type="checkbox" data-k="E03-3"><span>Recuento de PG de dos formas distintas que coinciden</span><span class="pt">3 pt</span></label></li></ul>
+      <div class="prog"><i></i></div>
+      <button class="claim" type="button" disabled>🔒</button>
+    </div>
+  </div>
+</article><div class="quarter reveal" id="q2"><span class="qn">Q2</span><div><h2>2º cuarto · Filtros y consultas</h2><p>Vectores lógicos, NA y ordenación: el día a día del analista. · 40 min</p></div><span class="line"></span></div>
+<article class="ex reveal" id="ex4" data-code="E04" data-title="Pívots en el radar" data-pts="0.6">
+  <div class="ex-head">
+    <div class="ex-num">4</div>
+    <div class="ex-title"><small>EJERCICIO 4 · E04</small><h3>Pívots en el radar</h3></div>
+    <div class="badges"><span class="tag lvl-M">Media</span><span class="tag">⏱ ~8 min</span><span class="tag gold">0.6 pts</span></div>
+  </div>
+  <div class="ex-body">
+    <div>
+      <h4>🎯 ENUNCIADO</h4><p>Filtra los jugadores que sean <strong>pívots (Center)</strong>, mostrando nombre, equipo, altura y overall. Mira bien qué valores puede tomar la posición en el dataset para saber cuál de ellos corresponde al pívot.</p><p>¿Cuántos pívots hay como posición principal? ¿Y si cuentas también a quienes lo son como <strong>posición secundaria</strong>? Calcula su altura media e identifica al pívot con mejor overall.</p><p class="out">📦 Objeto sugerido: <code>pivots</code></p>
+      <details class="hint"><summary>💡 Pista del entrenador</summary><p>Antes de filtrar por un valor de un factor, comprueba qué valores tiene. Para encontrar al mejor pívot no hace falta nada nuevo: ordena y quédate con el primero.</p></details>
+      <div class="checks"><h4>📟 MARCADOR DE RESULTADOS</h4><label class="ans" data-k="E04-a0" data-h="a19716b5" data-dp="0"><span>Pívots como posición principal</span><input type="text" inputmode="decimal" autocomplete="off" spellcheck="false" placeholder="número"><b class="st"></b></label><label class="ans" data-k="E04-a1" data-h="54bf18bf" data-dp="0"><span>Pívots en posición principal o secundaria</span><input type="text" inputmode="decimal" autocomplete="off" spellcheck="false" placeholder="número"><b class="st"></b></label><label class="ans" data-k="E04-a2" data-h="beb591d7" data-dp="1"><span>Altura media de los pívots principales (1 decimal)</span><input type="text" inputmode="decimal" autocomplete="off" spellcheck="false" placeholder="número"><b class="st"></b></label><label class="ans" data-k="E04-a3" data-h="8abd6efe"><span>Pívot con mejor overall (nombre)</span><input type="text" inputmode="text" autocomplete="off" spellcheck="false" placeholder="texto"><b class="st"></b></label><p class="muted" style="margin:6px 0 0;font-size:.76rem">Escribe el valor que te devuelve R y pulsa Enter. Usa punto o coma para los decimales.</p></div>
+    </div>
+    <div>
+      <h4>✅ CRITERIOS DE EVALUACIÓN</h4>
+      <ul class="reqs"><li><label><input type="checkbox" data-k="E04-0"><span>Filtro correcto con el valor real del pívot y selección de las 4 columnas</span><span class="pt">4 pt</span></label></li><li><label><input type="checkbox" data-k="E04-1"><span>Se combinan condiciones con <code>|</code> para posición principal o secundaria</span><span class="pt">3 pt</span></label></li><li><label><input type="checkbox" data-k="E04-2"><span>Altura media de los pívots y mejor pívot localizado</span><span class="pt">3 pt</span></label></li></ul>
+      <div class="prog"><i></i></div>
+      <button class="claim" type="button" disabled>🔒</button>
+    </div>
+  </div>
+</article>
+<article class="ex reveal" id="ex5" data-code="E05" data-title="Jugadores entre 185 y 195 cm" data-pts="0.4">
+  <div class="ex-head">
+    <div class="ex-num">5</div>
+    <div class="ex-title"><small>EJERCICIO 5 · E05</small><h3>Jugadores entre 185 y 195 cm</h3></div>
+    <div class="badges"><span class="tag lvl-F">Fácil</span><span class="tag">⏱ ~6 min</span><span class="tag gold">0.4 pts</span></div>
+  </div>
+  <div class="ex-body">
+    <div>
+      <h4>🎯 ENUNCIADO</h4><p>Saca los jugadores que midan <strong>entre 185 y 195 cm</strong> (ambos incluidos), con nombre, equipo, posición y altura. ¿Cuántos son? ¿Qué posición predomina en ese rango y por qué tiene sentido desde el punto de vista del baloncesto?</p><p class="out">📦 Objeto sugerido: <code>bajitos</code></p>
+      <details class="hint"><summary>💡 Pista del entrenador</summary><p>Son dos condiciones que tienen que cumplirse a la vez. Recuerda las posiciones: <strong>PG</strong> = base (<em>point guard</em>), <strong>SG</strong> = escolta (<em>shooting guard</em>), <strong>SF</strong> = alero, <strong>PF</strong> = ala-pívot y <strong>C</strong> = pívot.</p></details>
+      <div class="checks"><h4>📟 MARCADOR DE RESULTADOS</h4><label class="ans" data-k="E05-a0" data-h="cfb9ca32" data-dp="0"><span>Jugadores entre 185 y 195 cm</span><input type="text" inputmode="decimal" autocomplete="off" spellcheck="false" placeholder="número"><b class="st"></b></label><label class="ans" data-k="E05-a1" data-h="dc0958f7"><span>Posición predominante (código)</span><input type="text" inputmode="text" autocomplete="off" spellcheck="false" placeholder="texto"><b class="st"></b></label><p class="muted" style="margin:6px 0 0;font-size:.76rem">Escribe el valor que te devuelve R y pulsa Enter. Usa punto o coma para los decimales.</p></div>
+    </div>
+    <div>
+      <h4>✅ CRITERIOS DE EVALUACIÓN</h4>
+      <ul class="reqs"><li><label><input type="checkbox" data-k="E05-0"><span>Filtro con dos condiciones unidas por <code>&amp;</code> y límites incluidos</span><span class="pt">4 pt</span></label></li><li><label><input type="checkbox" data-k="E05-1"><span>Selección de las columnas pedidas</span><span class="pt">2 pt</span></label></li><li><label><input type="checkbox" data-k="E05-2"><span>Se cuenta el número de jugadores</span><span class="pt">2 pt</span></label></li><li><label><input type="checkbox" data-k="E05-3"><span>Se identifica y razona la posición predominante</span><span class="pt">2 pt</span></label></li></ul>
+      <div class="prog"><i></i></div>
+      <button class="claim" type="button" disabled>🔒</button>
+    </div>
+  </div>
+</article>
+<article class="ex reveal" id="ex6" data-code="E06" data-title="Récords físicos y valores NA" data-pts="0.7">
+  <div class="ex-head">
+    <div class="ex-num">6</div>
+    <div class="ex-title"><small>EJERCICIO 6 · E06</small><h3>Récords físicos y valores NA</h3></div>
+    <div class="badges"><span class="tag lvl-M">Media</span><span class="tag">⏱ ~9 min</span><span class="tag gold">0.7 pts</span></div>
+  </div>
+  <div class="ex-body">
+    <div>
+      <h4>🎯 ENUNCIADO</h4><p>¿Cuál es la <strong>altura máxima</strong>? ¿Y el <strong>peso máximo</strong>? Ejecuta primero <code>max()</code> sobre el peso tal cual y explica qué ocurre y por qué.</p><p>Identifica al jugador más alto, al más pesado y al más bajo. ¿Cuántos jugadores no tienen el peso registrado? Calcula también la media de años en la NBA de toda la liga.</p>
+      <details class="hint"><summary>💡 Pista del entrenador</summary><p>Las funciones de agregación (<code>min</code>, <code>max</code>, <code>mean</code>…) tienen un parámetro, normalmente a <code>FALSE</code>, que cambia cómo se tratan los valores ausentes. Para saber <em>quién</em> tiene el máximo, ordena el data frame y mira el principio o el final.</p></details>
+      <div class="checks"><h4>📟 MARCADOR DE RESULTADOS</h4><label class="ans" data-k="E06-a0" data-h="02f9285c" data-dp="0"><span>Altura máxima (cm)</span><input type="text" inputmode="decimal" autocomplete="off" spellcheck="false" placeholder="número"><b class="st"></b></label><label class="ans" data-k="E06-a1" data-h="59bce207" data-dp="0"><span>Peso máximo (kg)</span><input type="text" inputmode="decimal" autocomplete="off" spellcheck="false" placeholder="número"><b class="st"></b></label><label class="ans" data-k="E06-a2" data-h="7a196d9b"><span>Jugador más alto (nombre)</span><input type="text" inputmode="text" autocomplete="off" spellcheck="false" placeholder="texto"><b class="st"></b></label><label class="ans" data-k="E06-a3" data-h="4fcee03d" data-dp="0"><span>Jugadores sin peso registrado</span><input type="text" inputmode="decimal" autocomplete="off" spellcheck="false" placeholder="número"><b class="st"></b></label><label class="ans" data-k="E06-a4" data-h="f3c4507d" data-dp="2"><span>Media de años en la NBA (2 decimales)</span><input type="text" inputmode="decimal" autocomplete="off" spellcheck="false" placeholder="número"><b class="st"></b></label><p class="muted" style="margin:6px 0 0;font-size:.76rem">Escribe el valor que te devuelve R y pulsa Enter. Usa punto o coma para los decimales.</p></div>
+    </div>
+    <div>
+      <h4>✅ CRITERIOS DE EVALUACIÓN</h4>
+      <ul class="reqs"><li><label><input type="checkbox" data-k="E06-0"><span>Se explica qué devuelve <code>max()</code> sobre el peso la primera vez, ejecutado sin más</span><span class="pt">2 pt</span></label></li><li><label><input type="checkbox" data-k="E06-1"><span>Se usa <code>na.rm = TRUE</code> donde corresponde</span><span class="pt">3 pt</span></label></li><li><label><input type="checkbox" data-k="E06-2"><span>Se identifica a los jugadores (ordenando con <code>order()</code> y <code>head()</code>/<code>tail()</code>, o con <code>which()</code>)</span><span class="pt">3 pt</span></label></li><li><label><input type="checkbox" data-k="E06-3"><span>Se cuentan los NA del peso y se calcula la media de años</span><span class="pt">2 pt</span></label></li></ul>
+      <div class="prog"><i></i></div>
+      <button class="claim" type="button" disabled>🔒</button>
+    </div>
+  </div>
+</article>
+<article class="ex reveal" id="ex7" data-code="E07" data-title="Los veteranos de la liga" data-pts="0.5">
+  <div class="ex-head">
+    <div class="ex-num">7</div>
+    <div class="ex-title"><small>EJERCICIO 7 · E07</small><h3>Los veteranos de la liga</h3></div>
+    <div class="badges"><span class="tag lvl-F">Fácil</span><span class="tag">⏱ ~8 min</span><span class="tag gold">0.5 pts</span></div>
+  </div>
+  <div class="ex-body">
+    <div>
+      <h4>🎯 ENUNCIADO</h4><p>Usa <code>order()</code> para obtener los jugadores ordenados por años en la NBA, <strong>de más a menos</strong>. Muestra el top 10 con nombre, equipo, años y overall.</p><p>Si dos jugadores empatan en años, debe aparecer antes el de <strong>mayor overall</strong>. ¿En qué posición del ranking quedan los jugadores cuyos años son <code>NA</code>?</p><p class="out">📦 Objeto sugerido: <code>veteranos</code></p>
+      <details class="hint"><summary>💡 Pista del entrenador</summary><p><code>order()</code> acepta más de un vector: el segundo solo se usa para deshacer empates del primero.</p></details>
+      <div class="checks"><h4>📟 MARCADOR DE RESULTADOS</h4><label class="ans" data-k="E07-a0" data-h="7fd72228"><span>Jugador más veterano</span><input type="text" inputmode="text" autocomplete="off" spellcheck="false" placeholder="texto"><b class="st"></b></label><label class="ans" data-k="E07-a1" data-h="9fa3df82" data-dp="0"><span>Años en la NBA del más veterano</span><input type="text" inputmode="decimal" autocomplete="off" spellcheck="false" placeholder="número"><b class="st"></b></label><label class="ans" data-k="E07-a2" data-h="912280b9"><span>Jugador en el puesto 4 del ranking</span><input type="text" inputmode="text" autocomplete="off" spellcheck="false" placeholder="texto"><b class="st"></b></label><p class="muted" style="margin:6px 0 0;font-size:.76rem">Escribe el valor que te devuelve R y pulsa Enter. Usa punto o coma para los decimales.</p></div>
+    </div>
+    <div>
+      <h4>✅ CRITERIOS DE EVALUACIÓN</h4>
+      <ul class="reqs"><li><label><input type="checkbox" data-k="E07-0"><span>Ordenación decreciente con <code>order()</code></span><span class="pt">3 pt</span></label></li><li><label><input type="checkbox" data-k="E07-1"><span>Criterio de desempate por overall</span><span class="pt">3 pt</span></label></li><li><label><input type="checkbox" data-k="E07-2"><span>Se muestra el top 10 con las columnas pedidas</span><span class="pt">2 pt</span></label></li><li><label><input type="checkbox" data-k="E07-3"><span>Se responde dónde quedan los NA y se demuestra con una consulta (p. ej. <code>tail()</code>)</span><span class="pt">2 pt</span></label></li></ul>
+      <div class="prog"><i></i></div>
+      <button class="claim" type="button" disabled>🔒</button>
+    </div>
+  </div>
+</article>
+<article class="ex reveal" id="ex8" data-code="E08" data-title="Lista corta internacional" data-pts="0.8">
+  <div class="ex-head">
+    <div class="ex-num">8</div>
+    <div class="ex-title"><small>EJERCICIO 8 · E08</small><h3>Lista corta internacional</h3></div>
+    <div class="badges"><span class="tag lvl-M">Media</span><span class="tag">⏱ ~9 min</span><span class="tag gold">0.8 pts</span></div>
+  </div>
+  <div class="ex-body">
+    <div>
+      <h4>🎯 ENUNCIADO</h4><p>La dirección deportiva quiere el nombre, equipo y posición de los <strong>jugadores españoles con menos overall que la media</strong> de la liga. Ejecuta la consulta: ¿qué obtienes? Comprueba con los datos si el resultado es correcto y explícalo.</p><p>Como la lista se queda corta, amplía el scouting: jugadores cuya nacionalidad principal <strong>no sea Estados Unidos</strong> y con overall inferior a la media. ¿Cuántos son y cuáles son las <strong>3 nacionalidades</strong> que más se repiten?</p><p class="out">📦 Objetos sugeridos: <code>media_overall</code>, <code>internacionales</code></p>
+      <details class="hint"><summary>💡 Pista del entrenador</summary><p>Guarda la media en una variable antes de filtrar, así podrás reutilizarla. Para el top de nacionalidades, cuenta y luego ordena el recuento (mira <code>sort()</code> en la <a href="#consejos">pizarra del entrenador</a>).</p></details>
+      <div class="checks"><h4>📟 MARCADOR DE RESULTADOS</h4><label class="ans" data-k="E08-a0" data-h="4ecedeaa" data-dp="0"><span>Españoles con overall bajo la media</span><input type="text" inputmode="decimal" autocomplete="off" spellcheck="false" placeholder="número"><b class="st"></b></label><label class="ans" data-k="E08-a1" data-h="9994cb86" data-dp="0"><span>Overall del único español del dataset</span><input type="text" inputmode="decimal" autocomplete="off" spellcheck="false" placeholder="número"><b class="st"></b></label><label class="ans" data-k="E08-a2" data-h="1da0d445" data-dp="0"><span>Internacionales con overall bajo la media</span><input type="text" inputmode="decimal" autocomplete="off" spellcheck="false" placeholder="número"><b class="st"></b></label><p class="muted" style="margin:6px 0 0;font-size:.76rem">Escribe el valor que te devuelve R y pulsa Enter. Usa punto o coma para los decimales.</p></div>
+    </div>
+    <div>
+      <h4>✅ CRITERIOS DE EVALUACIÓN</h4>
+      <ul class="reqs"><li><label><input type="checkbox" data-k="E08-0"><span>La media se calcula con <code>mean()</code> y se guarda en una variable</span><span class="pt">2 pt</span></label></li><li><label><input type="checkbox" data-k="E08-1"><span>Consulta de españoles correcta y justificación del resultado</span><span class="pt">3 pt</span></label></li><li><label><input type="checkbox" data-k="E08-2"><span>Filtro de jugadores no estadounidenses con overall bajo la media</span><span class="pt">3 pt</span></label></li><li><label><input type="checkbox" data-k="E08-3"><span>Top 3 de nacionalidades (recuento ordenado)</span><span class="pt">2 pt</span></label></li></ul>
+      <div class="prog"><i></i></div>
+      <button class="claim" type="button" disabled>🔒</button>
+    </div>
+  </div>
+</article><div class="quarter reveal" id="q3"><span class="qn">Q3</span><div><h2>3er cuarto · Estructuras de datos</h2><p>Nuevas variables, factores ordenados, matrices y listas. · 28 min</p></div><span class="line"></span></div>
+<article class="ex reveal" id="ex9" data-code="E09" data-title="Nuevas variables: IMC y experiencia" data-pts="0.7">
+  <div class="ex-head">
+    <div class="ex-num">9</div>
+    <div class="ex-title"><small>EJERCICIO 9 · E09</small><h3>Nuevas variables: IMC y experiencia</h3></div>
+    <div class="badges"><span class="tag lvl-M">Media</span><span class="tag">⏱ ~9 min</span><span class="tag gold">0.7 pts</span></div>
+  </div>
+  <div class="ex-body">
+    <div>
+      <h4>🎯 ENUNCIADO</h4><p>Añade al data frame una columna <code>imc</code> con el índice de masa corporal (peso en kg dividido por la altura en metros al cuadrado), redondeada a 1 decimal. ¿Quién tiene el IMC más alto?</p><p>Después crea una columna <code>experiencia</code> como <strong>factor ordenado</strong> con tres niveles: <em>Rookie</em> (0 a 2 años), <em>Rodado</em> (3 a 7) y <em>Veterano</em> (8 o más). Cuenta cuántos jugadores hay en cada nivel y comprueba que la comparación <code>"Veterano" &gt; "Rookie"</code> se puede hacer con tu factor.</p><p class="out">📦 Columnas nuevas: <code>imc</code>, <code>experiencia</code></p>
+      <details class="hint"><summary>💡 Pista del entrenador</summary><p>Las operaciones entre columnas son vectorizadas: no hacen falta bucles. Para convertir un número en tramos tienes un ejemplo de <code>cut()</code> en la <a href="#consejos">pizarra del entrenador</a>.</p></details>
+      <div class="checks"><h4>📟 MARCADOR DE RESULTADOS</h4><label class="ans" data-k="E09-a0" data-h="7307f8af" data-dp="1"><span>IMC máximo (1 decimal)</span><input type="text" inputmode="decimal" autocomplete="off" spellcheck="false" placeholder="número"><b class="st"></b></label><label class="ans" data-k="E09-a1" data-h="ec054361"><span>Jugador con el IMC más alto</span><input type="text" inputmode="text" autocomplete="off" spellcheck="false" placeholder="texto"><b class="st"></b></label><label class="ans" data-k="E09-a2" data-h="c9b78229" data-dp="0"><span>Jugadores en el nivel Veterano</span><input type="text" inputmode="decimal" autocomplete="off" spellcheck="false" placeholder="número"><b class="st"></b></label><p class="muted" style="margin:6px 0 0;font-size:.76rem">Escribe el valor que te devuelve R y pulsa Enter. Usa punto o coma para los decimales.</p></div>
+    </div>
+    <div>
+      <h4>✅ CRITERIOS DE EVALUACIÓN</h4>
+      <ul class="reqs"><li><label><input type="checkbox" data-k="E09-0"><span>Columna <code>imc</code> calculada de forma vectorizada y redondeada</span><span class="pt">3 pt</span></label></li><li><label><input type="checkbox" data-k="E09-1"><span>Se identifica al jugador con mayor IMC</span><span class="pt">2 pt</span></label></li><li><label><input type="checkbox" data-k="E09-2"><span>Factor ordenado con los 3 niveles y los tramos correctos</span><span class="pt">3 pt</span></label></li><li><label><input type="checkbox" data-k="E09-3"><span>Recuento por nivel y comparación ordinal que devuelve <code>TRUE</code></span><span class="pt">2 pt</span></label></li></ul>
+      <div class="prog"><i></i></div>
+      <button class="claim" type="button" disabled>🔒</button>
+    </div>
+  </div>
+</article>
+<article class="ex reveal" id="ex10" data-code="E10" data-title="Matriz de scouting" data-pts="0.9">
+  <div class="ex-head">
+    <div class="ex-num">10</div>
+    <div class="ex-title"><small>EJERCICIO 10 · E10</small><h3>Matriz de scouting</h3></div>
+    <div class="badges"><span class="tag lvl-D">Difícil</span><span class="tag">⏱ ~11 min</span><span class="tag gold">0.9 pts</span></div>
+  </div>
+  <div class="ex-body">
+    <div>
+      <h4>🎯 ENUNCIADO</h4><p>Construye con <code>matrix()</code> una matriz <code>perfil</code> con los <strong>5 jugadores de mayor overall</strong> (una fila por jugador, en orden de overall) y cuatro columnas: <code>overall</code>, <code>speed</code>, <code>three_point_shot</code> y <code>strength</code>. Muestra el nombre de los 5 jugadores, la dimensión de la matriz y su traspuesta.</p><p>El cuerpo técnico pondera así: overall 40 %, velocidad 20 %, tiro de tres 30 % y fuerza 10 %. Usa <strong>multiplicación matricial</strong> para obtener la nota ponderada de cada jugador. ¿Quién sale ganando? ¿Coincide con el número 1 en overall?</p><p class="out">📦 Objetos sugeridos: <code>top5</code>, <code>perfil</code>, <code>pesos</code>, <code>nota</code></p>
+      <details class="hint"><summary>💡 Pista del entrenador</summary><p><code>matrix()</code> se rellena por columnas: si le pasas un vector hecho uniendo con <code>c()</code> varias columnas del top 5 y le dices cuántas filas tiene, cada columna original acaba en una columna de la matriz. Los pesos también pueden ser una matriz: repasa en los apuntes qué condición deben cumplir las dimensiones para multiplicar matricialmente.</p></details>
+      <div class="checks"><h4>📟 MARCADOR DE RESULTADOS</h4><label class="ans" data-k="E10-a0" data-h="1a73acbf" data-dp="1"><span>Nota ponderada más alta (1 decimal)</span><input type="text" inputmode="decimal" autocomplete="off" spellcheck="false" placeholder="número"><b class="st"></b></label><label class="ans" data-k="E10-a1" data-h="1250f39b"><span>Jugador con la nota ponderada más alta</span><input type="text" inputmode="text" autocomplete="off" spellcheck="false" placeholder="texto"><b class="st"></b></label><p class="muted" style="margin:6px 0 0;font-size:.76rem">Escribe el valor que te devuelve R y pulsa Enter. Usa punto o coma para los decimales.</p></div>
+    </div>
+    <div>
+      <h4>✅ CRITERIOS DE EVALUACIÓN</h4>
+      <ul class="reqs"><li><label><input type="checkbox" data-k="E10-0"><span>Top 5 obtenido con <code>order()</code> y sus nombres mostrados</span><span class="pt">2 pt</span></label></li><li><label><input type="checkbox" data-k="E10-1"><span>Matriz 5×4 construida con <code>matrix()</code> en el orden de columnas pedido</span><span class="pt">2 pt</span></label></li><li><label><input type="checkbox" data-k="E10-2"><span>Se muestran <code>dim()</code> y <code>t()</code></span><span class="pt">2 pt</span></label></li><li><label><input type="checkbox" data-k="E10-3"><span>Se usa <code>%*%</code> con dimensiones compatibles (5×4 · 4×1)</span><span class="pt">3 pt</span></label></li><li><label><input type="checkbox" data-k="E10-4"><span>Conclusión sobre el ganador frente al nº 1 en overall</span><span class="pt">1 pt</span></label></li></ul>
+      <div class="prog"><i></i></div>
+      <button class="claim" type="button" disabled>🔒</button>
+    </div>
+  </div>
+</article>
+<article class="ex reveal" id="ex11" data-code="E11" data-title="Lista: el informe de franquicia" data-pts="0.6">
+  <div class="ex-head">
+    <div class="ex-num">11</div>
+    <div class="ex-title"><small>EJERCICIO 11 · E11</small><h3>Lista: el informe de franquicia</h3></div>
+    <div class="badges"><span class="tag lvl-M">Media</span><span class="tag">⏱ ~8 min</span><span class="tag gold">0.6 pts</span></div>
+  </div>
+  <div class="ex-body">
+    <div>
+      <h4>🎯 ENUNCIADO</h4><p>Elige a los <strong>Denver Nuggets</strong> y crea una lista llamada <code>informe</code> con estos elementos con nombre: el nombre del equipo, el vector de nombres de sus jugadores, la media de overall de la plantilla, la matriz del ejercicio anterior y un texto de conclusión.</p><p>Accede al vector de jugadores de <strong>tres formas</strong> distintas y explica con <code>class()</code> qué diferencia hay entre ellas.</p><p class="out">📦 Objeto esperado: <code>informe</code> (list)</p>
+      <details class="hint"><summary>💡 Pista del entrenador</summary><p>Un factor no es lo mismo que un vector de texto: piensa qué tipo quieres guardar en la lista. Uno de los tres accesos no devuelve lo que parece.</p></details>
+      <div class="checks"><h4>📟 MARCADOR DE RESULTADOS</h4><label class="ans" data-k="E11-a0" data-h="acaaafbe" data-dp="0"><span>Jugadores en la plantilla de los Nuggets</span><input type="text" inputmode="decimal" autocomplete="off" spellcheck="false" placeholder="número"><b class="st"></b></label><label class="ans" data-k="E11-a1" data-h="825755e8" data-dp="2"><span>Media de overall de los Nuggets (2 decimales)</span><input type="text" inputmode="decimal" autocomplete="off" spellcheck="false" placeholder="número"><b class="st"></b></label><label class="ans" data-k="E11-a2" data-h="d8b3cbea"><span>class() de informe[&quot;jugadores&quot;]</span><input type="text" inputmode="text" autocomplete="off" spellcheck="false" placeholder="texto"><b class="st"></b></label><p class="muted" style="margin:6px 0 0;font-size:.76rem">Escribe el valor que te devuelve R y pulsa Enter. Usa punto o coma para los decimales.</p></div>
+    </div>
+    <div>
+      <h4>✅ CRITERIOS DE EVALUACIÓN</h4>
+      <ul class="reqs"><li><label><input type="checkbox" data-k="E11-0"><span>Lista con los 5 elementos con nombre</span><span class="pt">3 pt</span></label></li><li><label><input type="checkbox" data-k="E11-1"><span>El vector de jugadores es de tipo <code>character</code></span><span class="pt">2 pt</span></label></li><li><label><input type="checkbox" data-k="E11-2"><span>Tres accesos (<code>$</code>, <code>[[ ]]</code>, <code>[ ]</code>) comparados con <code>class()</code></span><span class="pt">3 pt</span></label></li><li><label><input type="checkbox" data-k="E11-3"><span>Texto de conclusión con sentido</span><span class="pt">2 pt</span></label></li></ul>
+      <div class="prog"><i></i></div>
+      <button class="claim" type="button" disabled>🔒</button>
+    </div>
+  </div>
+</article><div class="quarter reveal" id="q4"><span class="qn">Q4</span><div><h2>4º cuarto · Visualización y conclusiones</h2><p>Dos gráficas de cada tipo, correlaciones y un veredicto final. · 32 min</p></div><span class="line"></span></div>
+<article class="ex reveal" id="ex12" data-code="E12" data-title="Distribuciones: histogramas y box plots" data-pts="1.0">
+  <div class="ex-head">
+    <div class="ex-num">12</div>
+    <div class="ex-title"><small>EJERCICIO 12 · E12</small><h3>Distribuciones: histogramas y box plots</h3></div>
+    <div class="badges"><span class="tag lvl-M">Media</span><span class="tag">⏱ ~10 min</span><span class="tag gold">1.0 pts</span></div>
+  </div>
+  <div class="ex-body">
+    <div>
+      <h4>🎯 ENUNCIADO</h4><p>Antes de dibujar nada, escribe en una celda de texto <strong>3 hipótesis</strong> sobre los datos (por ejemplo, <em>«los pívots son más altos que los bases»</em>). Las contrastarás en el ejercicio 14.</p><p>Genera estas cuatro gráficas, con título y ejes con nombre, y escribe la conclusión de cada una:</p><ul class="feat"><li>Histograma de <code>overall</code></li><li>Histograma de <code>height_cm</code></li><li>Box plot de <code>height_cm</code> por posición principal</li><li>Box plot de <code>weight_kg</code> por posición principal</li></ul><p class="out">📦 4 gráficas + 4 conclusiones</p>
+      <details class="hint"><summary>💡 Pista del entrenador</summary><p>El histograma es para la distribución de una variable numérica; el box plot, para compararla entre grupos. En la <a href="#consejos">pizarra del entrenador</a> tienes cómo se escribe «variable según grupo».</p></details>
+      
+    </div>
+    <div>
+      <h4>✅ CRITERIOS DE EVALUACIÓN</h4>
+      <ul class="reqs"><li><label><input type="checkbox" data-k="E12-0"><span>3 hipótesis escritas antes de las gráficas</span><span class="pt">2 pt</span></label></li><li><label><input type="checkbox" data-k="E12-1"><span>Histogramas de overall y height_cm con título y ejes</span><span class="pt">2 pt</span></label></li><li><label><input type="checkbox" data-k="E12-2"><span>Box plots de altura y peso por posición</span><span class="pt">3 pt</span></label></li><li><label><input type="checkbox" data-k="E12-3"><span>Una conclusión razonada por gráfica</span><span class="pt">3 pt</span></label></li></ul>
+      <div class="prog"><i></i></div>
+      <button class="claim" type="button" disabled>🔒</button>
+    </div>
+  </div>
+</article>
+<article class="ex reveal" id="ex13" data-code="E13" data-title="Comparar categorías: barras y quesitos" data-pts="1.0">
+  <div class="ex-head">
+    <div class="ex-num">13</div>
+    <div class="ex-title"><small>EJERCICIO 13 · E13</small><h3>Comparar categorías: barras y quesitos</h3></div>
+    <div class="badges"><span class="tag lvl-M">Media</span><span class="tag">⏱ ~10 min</span><span class="tag gold">1.0 pts</span></div>
+  </div>
+  <div class="ex-body">
+    <div>
+      <h4>🎯 ENUNCIADO</h4><p>Genera <strong>dos gráficos de barras</strong>: uno de frecuencias (jugadores por posición) y otro de un valor agregado (overall medio por posición, o los 10 equipos con mejor media). Después, <strong>dos pie charts</strong> que muestren proporciones, por ejemplo el reparto de posiciones y los jugadores de EE. UU. frente al resto del mundo.</p><p>¿Qué posición tiene el overall medio más alto? ¿Qué equipo tiene la mejor media? ¿Qué porcentaje de la liga es estadounidense?</p><p class="out">📦 4 gráficas + respuestas</p>
+      <details class="hint"><summary>💡 Pista del entrenador</summary><p>Un gráfico de barras de un valor agregado necesita primero <strong>un número por categoría</strong> (por ejemplo, la media de overall de cada posición). Eso lo hace <code>tapply()</code>, que tienes con un ejemplo en la <a href="#consejos">pizarra del entrenador</a>: recibe tres cosas, <em>qué valores</em> quieres resumir, <em>según qué grupos</em> los separas y <em>qué función</em> aplicas a cada grupo. Devuelve un vector con nombre (un valor por grupo) que puedes ordenar o pasar directamente a <code>barplot()</code>.</p><p>Un quesito de dos categorías puede salir de contar con <code>table()</code> una condición lógica.</p></details>
+      <div class="checks"><h4>📟 MARCADOR DE RESULTADOS</h4><label class="ans" data-k="E13-a0" data-h="1dce9187"><span>Posición con mayor overall medio (código)</span><input type="text" inputmode="text" autocomplete="off" spellcheck="false" placeholder="texto"><b class="st"></b></label><label class="ans" data-k="E13-a1" data-h="f0154c79"><span>Equipo con mejor overall medio</span><input type="text" inputmode="text" autocomplete="off" spellcheck="false" placeholder="texto"><b class="st"></b></label><label class="ans" data-k="E13-a2" data-h="c49ef25d" data-dp="1"><span>% de jugadores estadounidenses (1 decimal)</span><input type="text" inputmode="decimal" autocomplete="off" spellcheck="false" placeholder="número"><b class="st"></b></label><p class="muted" style="margin:6px 0 0;font-size:.76rem">Escribe el valor que te devuelve R y pulsa Enter. Usa punto o coma para los decimales.</p></div>
+    </div>
+    <div>
+      <h4>✅ CRITERIOS DE EVALUACIÓN</h4>
+      <ul class="reqs"><li><label><input type="checkbox" data-k="E13-0"><span>Barplot de frecuencias</span><span class="pt">2 pt</span></label></li><li><label><input type="checkbox" data-k="E13-1"><span>Barplot de un valor agregado (<code>tapply()</code> o <code>aggregate()</code>)</span><span class="pt">3 pt</span></label></li><li><label><input type="checkbox" data-k="E13-2"><span>2 pie charts con etiquetas legibles</span><span class="pt">2 pt</span></label></li><li><label><input type="checkbox" data-k="E13-3"><span>Conclusiones de cada gráfica</span><span class="pt">3 pt</span></label></li></ul>
+      <div class="prog"><i></i></div>
+      <button class="claim" type="button" disabled>🔒</button>
+    </div>
+  </div>
+</article>
+<article class="ex reveal" id="ex14" data-code="E14" data-title="Relaciones: dispersión y correlación" data-pts="1.3">
+  <div class="ex-head">
+    <div class="ex-num">14</div>
+    <div class="ex-title"><small>EJERCICIO 14 · E14</small><h3>Relaciones: dispersión y correlación</h3></div>
+    <div class="badges"><span class="tag lvl-D">Difícil</span><span class="tag">⏱ ~12 min</span><span class="tag gold">1.3 pts</span></div>
+  </div>
+  <div class="ex-body">
+    <div>
+      <h4>🎯 ENUNCIADO</h4><p>Genera <strong>dos diagramas de dispersión</strong>: altura frente a peso, y otra pareja de variables numéricas que te parezca interesante (por ejemplo, altura frente a velocidad o tiro de tres). Calcula la <strong>correlación</strong> de cada pareja usando solo observaciones completas e interprétala: signo y fuerza.</p><p>Cierra el cuaderno con una celda de texto de <strong>conclusiones</strong>: ¿se cumplieron las hipótesis del ejercicio 12?</p><p class="out">📦 2 gráficas + correlaciones + bloque de conclusiones</p>
+      <details class="hint"><summary>💡 Pista del entrenador</summary><p>Mira la <a href="#consejos">pizarra del entrenador</a>: <code>cor()</code> tiene un parámetro para trabajar solo con valores no nulos.</p></details>
+      <div class="checks"><h4>📟 MARCADOR DE RESULTADOS</h4><label class="ans" data-k="E14-a0" data-h="893ddcc3" data-dp="2"><span>Correlación altura-peso (2 decimales)</span><input type="text" inputmode="decimal" autocomplete="off" spellcheck="false" placeholder="número"><b class="st"></b></label><label class="ans" data-k="E14-a1" data-h="297d0de8" data-dp="2"><span>Correlación altura-velocidad (2 decimales)</span><input type="text" inputmode="decimal" autocomplete="off" spellcheck="false" placeholder="número"><b class="st"></b></label><p class="muted" style="margin:6px 0 0;font-size:.76rem">Escribe el valor que te devuelve R y pulsa Enter. Usa punto o coma para los decimales.</p></div>
+    </div>
+    <div>
+      <h4>✅ CRITERIOS DE EVALUACIÓN</h4>
+      <ul class="reqs"><li><label><input type="checkbox" data-k="E14-0"><span>2 diagramas de dispersión con ejes con nombre</span><span class="pt">2 pt</span></label></li><li><label><input type="checkbox" data-k="E14-1"><span>Correlaciones con <code>use = "complete.obs"</code></span><span class="pt">3 pt</span></label></li><li><label><input type="checkbox" data-k="E14-2"><span>Interpretación correcta (signo, fuerza, correlación ≠ causalidad)</span><span class="pt">3 pt</span></label></li><li><label><input type="checkbox" data-k="E14-3"><span>Conclusiones finales contrastadas con las hipótesis</span><span class="pt">2 pt</span></label></li></ul>
+      <div class="prog"><i></i></div>
+      <button class="claim" type="button" disabled>🔒</button>
+    </div>
+  </div>
+</article>
+  </section>
+
+  <section class="panel reveal" id="rubrica">
+    <div class="panel-head"><h2>🧮 Criterios generales y entrega</h2></div>
+    <ul class="feat">
+      <li><strong>El cuaderno se ejecuta de principio a fin</strong> (<em>Ejecutar todas</em>) sin errores sobre el CSV original.</li>
+      <li><strong>Cada ejercicio tiene su celda de texto</strong> (Markdown) con el código <code>E01</code> … <code>E14</code> y el enunciado, seguida de su celda de código.</li>
+      <li><strong>Los NA se tratan conscientemente</strong>: se explica dónde aparecen y cómo se gestionan.</li>
+      <li><strong>Las gráficas</strong> tienen título, ejes y una conclusión escrita; las hipótesis del E12 se contrastan en el E14.</li>
+      <li><strong>Entrega</strong>: en Colab, <em>Archivo → Descargar → Descargar .ipynb</em>, y sube ese cuaderno con el nombre <code>scouting_apellido_nombre.ipynb</code>.</li>
+    </ul>
+  </section>
+
+  <div class="secret" id="triggerZone" title="Coloca el cursor aquí y escribe la clave">
+    <svg viewBox="0 0 120 120" aria-hidden="true"><rect x="14" y="10" width="92" height="100" rx="10" fill="#1f2a44" stroke="#ff7a1a" stroke-width="4"/><rect x="44" y="4" width="32" height="14" rx="4" fill="#ff7a1a"/><path d="M28 34h64M28 34v58h64V34M60 34v58" stroke="#e8eefb" stroke-width="2" fill="none" opacity=".7"/><circle cx="60" cy="63" r="12" stroke="#e8eefb" stroke-width="2" fill="none" opacity=".7"/><text x="38" y="56" font-family="Anton,Impact" font-size="14" fill="#ffb347">X</text><text x="72" y="84" font-family="Anton,Impact" font-size="14" fill="#ffb347">O</text><path d="M44 52 Q60 40 74 76" stroke="#ffb347" stroke-width="2.5" fill="none" stroke-dasharray="4 3"/></svg>
+    <h3>PIZARRA TÁCTICA DEL ENTRENADOR</h3><p class="muted">Posa el cursor sobre la pizarra y teclea la jugada secreta…</p><div class="status" id="secretStatus">Estado: esperando jugada…</div>
+  </div>
+  
+</main>
+<div class="gg-modal" id="ggModal" role="dialog" aria-modal="true" aria-label="Imagen secreta">
+  <div class="gg-frame"><button class="gg-close" id="ggClose" type="button" aria-label="Cerrar">✕</button>
+    <img src="img/gg_secreto.svg" alt="¡Venga, ponte a hacer el examen!" id="ggImage">
+    <p class="gg-caption">🔓 JUGADA DESCIFRADA · Pulsa ESC para cerrar</p></div></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<footer><button class="btn" id="introAgain" type="button" style="margin-bottom:10px">🎬 Ver la intro otra vez</button><br>Examen NBA 2K25 · Introducción a R (uso educativo) · Datos de jugadores de NBA 2K25 · Imágenes de jugadores y logos: NBA.com</footer>
+<script src="js/main.js"></script>
+</body></html>
