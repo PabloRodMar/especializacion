@@ -1,0 +1,27 @@
+datanode1	172.18.0.3
+
+datanode2	172.18.0.2
+
+datanode3   172.18.0.4 
+
+Pregunta 1:
+¿Qué significa la línea Last contact? ¿Qué crees que pasará con ella si un DataNode se apaga?
+
+- Signifca la última vez que se tuvo un registro con el DataNode.
+  Si el DataNode se apaga, esa línea no creo que cambie, ya que es una línea informativa
+  para saber cuando fue la última vez que se recibió información del nodo.
+
+Pregunta 2:
+Cada DataNode dice tener unos cientos de GB de capacidad, pero los tres están dentro de tu mismo ordenador. 
+¿Es este clúster realmente tolerante a fallos? ¿Qué pasaría si se apaga tu ordenador?
+
+- Sí, ya que la gracia de tener 3 DataNodes es que se apoyen entre ellos, y que si uno falla, los demás
+  puedan cubrir su fallo con backups y datos espejo. 
+  Si mi ordenador se apaga, se apaga también el contenedor Docker, con lo que el estado de los DataNodes se 
+  congela y cuando vuelva a levantar el contenedor estarán en el mismo estado que cuando se apagó. 
+
+Pregunta 3:
+printTopology dice /default-rack. 
+¿Qué significa? ¿Contra qué tipo de avería no nos protege tener todos los nodos en el mismo rack?
+
+- 
