@@ -1,0 +1,46 @@
+# Clúster Hadoop de laboratorio: 1 NameNode, 3 DataNodes (+1 de reserva) y YARN
+x-hadoop: &hadoop
+  image: docker.io/apache/hadoop:3.5.0      # si no existe esta etiqueta, usar apache/hadoop:3.4.2
+  platform: linux/amd64                     # imagen solo para Intel/AMD: en Mac M1-M5 Docker la emula con Rosetta
+  env_file: [./config]
+
+services:
+  namenode:
+    <<: *hadoop
+    hostname: namenode
+    command: ["hdfs", "namenode"]
+    ports: ["127.0.0.1:9870:9870"]
+    environment:
+      ENSURE_NAMENODE_DIR: "/tmp/hadoop-hadoop/dfs/name"   # carpeta real del NameNode (usuario hadoop): así solo se formatea la primera vez
+    volumes:
+      - ./datos:/lab/datos
+      - ./trabajos:/lab/trabajos
+      - ./dfs.exclude:/opt/hadoop/etc/hadoop/dfs.exclude
+
+  datanode1:
+    <<: *hadoop
+    hostname: datanode1
+    command: ["hdfs", "datanode"]
+  datanode2:
+    <<: *hadoop
+    hostname: datanode2
+    command: ["hdfs", "datanode"]
+  datanode3:
+    <<: *hadoop
+    hostname: datanode3
+    command: ["hdfs", "datanode"]
+  datanode4:                       # nodo de reserva: solo arranca con --profile ampliacion
+    <<: *hadoop
+    hostname: datanode4
+    command: ["hdfs", "datanode"]
+    profiles: ["ampliacion"]
+
+  resourcemanager:
+    <<: *hadoop
+    hostname: resourcemanager
+    command: ["yarn", "resourcemanager"]
+    ports: ["127.0.0.1:8088:8088"]
+  nodemanager:
+    <<: *hadoop
+    hostname: nodemanager
+    command: ["yarn", "nodemanager"]

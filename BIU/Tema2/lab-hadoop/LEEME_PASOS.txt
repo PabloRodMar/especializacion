@@ -1,0 +1,97 @@
+LABORATORIO HADOOP CON DOCKER - UT02
+====================================
+
+Que hay en esta carpeta
+-----------------------
+compose.yaml   -> la "receta": que ordenadores virtuales (contenedores) crear
+config         -> la configuracion de Hadoop (replicacion 3, bloques de 16 MB...)
+dfs.exclude    -> archivo vacio, necesario. NO BORRAR
+datos/         -> eventos_2026-10-01.csv (60 MB de datos de prueba ya generados)
+trabajos/      -> programas de MapReduce en Python (para mas adelante)
+gen_eventos.py -> genera mas datos de prueba si hicieran falta
+
+
+PASO 0. Instalar Docker (una sola vez por equipo)
+-------------------------------------------------
+Windows o Mac: instalar "Docker Desktop" desde docker.com.
+  - En Windows necesita WSL2 y permisos de administrador (pedir al coordinador TIC).
+  - Abrir Docker Desktop y esperar a que diga "Engine running".
+Mac con chip Apple (M1...M5): Docker Desktop -> Settings -> General ->
+  marcar "Use Rosetta for x86_64/amd64 emulation on Apple Silicon".
+  El clúster funciona igual, solo arranca algo más lento.
+Linux: instalar el paquete docker con el plugin "docker compose".
+
+Comprobar en una terminal:
+    docker compose version
+
+
+PASO 1. Abrir una terminal DENTRO de esta carpeta
+-------------------------------------------------
+Mac: en Finder, clic derecho sobre la carpeta lab-hadoop -> "Nuevo terminal en la carpeta".
+Windows: abrir la carpeta lab-hadoop en el Explorador, clic derecho
+         en un hueco vacio -> "Abrir en Terminal".
+Linux/Mac: cd ruta/a/lab-hadoop
+
+
+PASO 2. Arrancar el cluster
+---------------------------
+    docker compose up -d
+
+La primera vez descarga la imagen de Hadoop (unos minutos). Despues tarda segundos.
+Comprobar que hay 6 contenedores en marcha:
+    docker compose ps
+
+
+PASO 3. Comprobar que funciona (esperar 30 segundos tras arrancar)
+------------------------------------------------------------------
+    docker compose exec namenode hdfs dfsadmin -report
+
+Debe aparecer:  Live datanodes (3)
+En el navegador: http://localhost:9870  (pestana "Datanodes")
+
+
+PASO 4. Practica: tumbar un nodo
+--------------------------------
+4.1 Subir el fichero a HDFS:
+    docker compose exec namenode hdfs dfs -mkdir -p /curso
+    docker compose exec namenode hdfs dfs -put /lab/datos/eventos_2026-10-01.csv /curso/
+
+4.2 Ver sus bloques y donde esta cada copia (4 bloques x 3 copias):
+    docker compose exec namenode hdfs fsck /curso -files -blocks -locations
+
+4.3 Huella del fichero (anotar el resultado):
+    docker compose exec namenode bash -c "hdfs dfs -cat /curso/*.csv | sha256sum"
+
+4.4 Tumbar un nodo (anotar la HORA):
+    docker compose stop datanode2
+
+4.5 Repetir cada 20 segundos y anotar que cambia:
+    docker compose exec namenode hdfs dfsadmin -report -dead
+    docker compose exec namenode hdfs fsck /curso
+    (Hacia los 90 s: "Dead datanodes (1)" y bloques "Under-replicated")
+
+4.6 Pregunta: con 3 DataNodes, se recupera la tercera copia? (Respuesta: no)
+
+4.7 Anadir el nodo de reserva y ver como se recupera solo:
+    docker compose --profile ampliacion up -d datanode4
+    docker compose exec namenode hdfs fsck /curso
+    (en pocos minutos "Under-replicated blocks: 0")
+
+4.8 Comprobar que la huella es la misma que en 4.3:
+    docker compose exec namenode bash -c "hdfs dfs -cat /curso/*.csv | sha256sum"
+
+
+PASO 5. Parar al terminar
+-------------------------
+Parar sin perder lo hecho:       docker compose --profile ampliacion stop
+Borrar todo y empezar de cero:   docker compose --profile ampliacion down
+
+
+Si algo falla
+-------------
+- "Live datanodes (0)": esperar un minuto y repetir.
+- Puerto 9870 ocupado: cerrar otro laboratorio anterior (docker ps).
+- Error con la imagen 3.5.0: cambiar en compose.yaml "3.5.0" por "3.4.2".
+- Un DataNode arranca y se para: docker compose down y volver al paso 2.
+- dfs.exclude aparece como carpeta: borrarla, crear un archivo vacio con ese nombre
+  y volver al paso 2.
