@@ -1,0 +1,3 @@
+Copia aquí TODOS los archivos de tu carpeta staging/ de la práctica 1
+(Mi unidad/SPS_UT1_P1/staging/), incluido registro_extracciones.csv,
+y los dos PDF del aula virtual. Sin subcarpetas y sin cambiar los nombres.

@@ -1,0 +1,49 @@
+# SPS · UT 1 · Práctica 2 — Entorno: HDFS de un nodo + Jupyter
+# No modifiques este archivo.
+#   Arrancar:        docker compose up -d
+#   Apagar:          docker compose down      (el data lake se conserva)
+#   Empezar de cero: docker compose down -v   (BORRA el data lake)
+
+name: sps-ut1-p2
+
+services:
+  namenode:
+    image: apache/hadoop:3.4.1
+    hostname: namenode
+    command: ["hdfs", "namenode"]
+    user: root
+    env_file: ./config/hadoop.env
+    environment:
+      # Formatea HDFS solo la primera vez (cuando esta carpeta aún no existe)
+      ENSURE_NAMENODE_DIR: /hadoop/dfs/name
+    ports:
+      - "9870:9870"          # interfaz web del NameNode (opcional)
+    volumes:
+      - hdfs_metadatos:/hadoop/dfs
+
+  datanode:
+    image: apache/hadoop:3.4.1
+    hostname: datanode
+    command: ["hdfs", "datanode"]
+    user: root
+    env_file: ./config/hadoop.env
+    depends_on:
+      - namenode
+    volumes:
+      - hdfs_bloques:/hadoop/dfs
+
+  jupyter:
+    build: ./config/jupyter
+    image: sps-ut1-p2-jupyter
+    depends_on:
+      - namenode
+      - datanode
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./cuadernos:/trabajo/cuadernos
+      - ./area_intermedia:/trabajo/area_intermedia:ro   # solo lectura: el origen no se toca
+
+volumes:
+  hdfs_metadatos:   # metadatos del NameNode (qué archivos hay y dónde están sus bloques)
+  hdfs_bloques:     # bloques del DataNode (los datos)
